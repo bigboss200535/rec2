@@ -199,29 +199,29 @@
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
 										<div class="menu-item">
-											<a class="menu-link" href="/locate">
+											<a class="menu-link" href="/Locatepayer">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
 												<span class="menu-title">Payers</span>
 											</a>
 										</div>
-										<div class="menu-item">
+										<!-- <div class="menu-item">
 											<a class="menu-link" href="/locate">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
 												<span class="menu-title">Users</span>
 											</a>
-										</div>
-										<div class="menu-item">
+										</div> -->
+										<!-- <div class="menu-item">
 											<a class="menu-link" href="#">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
 												<span class="menu-title">Collectors</span>
 											</a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="menu-item">

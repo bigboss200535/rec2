@@ -84,6 +84,10 @@ Route::get('/Locatepayer', function (){
     return view('Location/LocatePayer');
 });
 
+Route::get('/UserProfile', function (){
+    return view('User/Profile');
+});
+
 Route::get('/Payments', function (){
     return view('Monetise/Payments');
 });

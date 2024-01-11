@@ -697,7 +697,7 @@
 											<!--end::Menu separator-->
 											<!--begin::Menu item-->
 											<div class="menu-item px-5">
-												<a href="/profile" class="menu-link px-5">My Profile</a>
+												<a href="/UserProfile" class="menu-link px-5">My Profile</a>
 											</div>
 											<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
 												<a href="#" class="menu-link px-5">
@@ -706,7 +706,7 @@
 													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/united-states.svg') }}" alt="" /></span></span>
 												</a>
 												<!--begin::Menu sub-->
-												<div class="menu-sub menu-sub-dropdown w-175px py-4">
+												<!-- <div class="menu-sub menu-sub-dropdown w-175px py-4">
 													<div class="menu-item px-3">
 														<a href="account/settings.html" class="menu-link d-flex px-5 active">
 														<span class="symbol symbol-20px me-4">
@@ -719,26 +719,9 @@
 															<img class="rounded-1" src="asset('media/flags/france.svg') }}" alt="" />
 														</span>French</a>
 													</div>
-												</div>
+												</div> -->
 												<!--end::Menu sub-->
 											</div>
-											<!--end::Menu item-->
-											<!--begin::Menu item-->
-											<div class="menu-item px-5 my-1">
-												<a href="#" class="menu-link px-5">Account Settings</a>
-											</div>
-											<!-- <div class="separator my-2"></div> -->
-											<!--end::Menu separator-->
-											<!--begin::Menu item-->
-											<!-- <div class="menu-item px-5">
-												<div class="menu-content px-5">
-													<label class="form-check form-switch form-check-custom form-check-solid pulse pulse-success" for="kt_user_menu_dark_mode_toggle">
-														<input class="form-check-input w-30px h-20px" type="checkbox" value="1" name="mode" id="kt_user_menu_dark_mode_toggle" data-kt-url="#" />
-														<span class="pulse-ring ms-n1"></span>
-														<span class="form-check-label text-gray-600 fs-7">Dark Mode</span>
-													</label>
-												</div>
-											</div> -->
 											<div class="separator my-2"></div>
 											<div class="menu-item px-5">
 												<a href="{{ route('Logout') }}" class="menu-link px-5">Sign Out</a>
