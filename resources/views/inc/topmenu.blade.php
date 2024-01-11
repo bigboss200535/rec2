@@ -725,6 +725,9 @@
 											<div class="separator my-2"></div>
 											<div class="menu-item px-5">
 												<a href="{{ route('Logout') }}" class="menu-link px-5">Sign Out</a>
+													<form id="logout-form" action="{{ route('Logout') }}" method="POST" style="display: none;">
+    												@csrf
+													</form>
 											</div>
 										</div>
 									</div>

@@ -115,70 +115,22 @@
 																<!--end::Heading-->
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Create Invoice</a>
+																	<a href="/CreateInvoice" class="menu-link px-3">Create Invoice</a>
 																</div>
 																<!--end::Menu item-->
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="#" class="menu-link flex-stack px-3">Create Payment
+																	<a href="/Payments" class="menu-link flex-stack px-3">Create Payment
 																	<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a target name for future usage and reference"></i></a>
 																</div>
 																<!--end::Menu item-->
 																<!--begin::Menu item-->
 																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Generate Bill</a>
+																	<a href="CreateInvoice" class="menu-link px-3">Generate Bill</a>
 																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-																	<a href="#" class="menu-link px-3">
-																		<span class="menu-title">Subscription</span>
-																		<span class="menu-arrow"></span>
-																	</a>
-																	<!--begin::Menu sub-->
-																	<div class="menu-sub menu-sub-dropdown w-175px py-4">
-																		<!--begin::Menu item-->
-																		<div class="menu-item px-3">
-																			<a href="#" class="menu-link px-3">Plans</a>
-																		</div>
-																		<!--end::Menu item-->
-																		<!--begin::Menu item-->
-																		<div class="menu-item px-3">
-																			<a href="#" class="menu-link px-3">Billing</a>
-																		</div>
-																		<!--end::Menu item-->
-																		<!--begin::Menu item-->
-																		<div class="menu-item px-3">
-																			<a href="#" class="menu-link px-3">Statements</a>
-																		</div>
-																		<!--end::Menu item-->
-																		<!--begin::Menu separator-->
-																		<div class="separator my-2"></div>
-																		<!--end::Menu separator-->
-																		<!--begin::Menu item-->
-																		<div class="menu-item px-3">
-																			<div class="menu-content px-3">
-																				<!--begin::Switch-->
-																				<label class="form-check form-switch form-check-custom form-check-solid">
-																					<!--begin::Input-->
-																					<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-																					<!--end::Input-->
-																					<!--end::Label-->
-																					<span class="form-check-label text-muted fs-6">Recuring</span>
-																					<!--end::Label-->
-																				</label>
-																				<!--end::Switch-->
-																			</div>
-																		</div>
-																		<!--end::Menu item-->
-																	</div>
-																	<!--end::Menu sub-->
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3 my-1">
+																<!-- <div class="menu-item px-3 my-1">
 																	<a href="#" class="menu-link px-3">Settings</a>
-																</div>
+																</div> -->
 																<!--end::Menu item-->
 															</div>
 															<!--end::Menu 3-->
@@ -230,7 +182,7 @@
 																</div>
 																<!--end::Number-->
 																<!--begin::Label-->
-																<div class="fw-bold fs-6 text-gray-400">Projects</div>
+																<div class="fw-bold fs-6 text-gray-400">Transactions</div>
 																<!--end::Label-->
 															</div>
 															<!--end::Stat-->
@@ -258,44 +210,6 @@
 												</div>
 											</div>
 										</div>
-										<!--end::Details-->
-										<!--begin::Navs-->
-										<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="#">Overview</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Settings</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Security</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Billing</a>
-											</li>
-											
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Statements</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Referrals</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">API Keys</a>
-											</li>
-											
-											<li class="nav-item mt-2">
-												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Logs</a>
-											</li>
-										
-										</ul>
-										
 									</div>
 								</div>
 								<!--end::Navbar-->
@@ -323,7 +237,7 @@
 										<div class="row mb-7">
 											<label class="col-lg-4 fw-bold text-muted">Municipal</label>
 											<div class="col-lg-8 fv-row">
-												<span class="fw-bold text-gray-800 fs-6">Keenthemes</span>
+												<span class="fw-bold text-gray-800 fs-6">BLITA</span>
 											</div>
 										</div>
 										<div class="row mb-7">

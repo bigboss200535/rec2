@@ -19,9 +19,9 @@ Route::get('/', function (){
 });
 
 
-// view invoices of tax payers
-Route::get('/logout', function (){
-    return view('User/Logout');
+//logof from the system
+Route::get('/Logout', function (){
+    return view('/');
 });
 
 
@@ -92,10 +92,10 @@ Route::get('/Payments', function (){
     return view('Monetise/Payments');
 });
 
-Route::get('Logout', 'AuthController@logout')->name('Logout');
+Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 
 
-Route::get('login', [AuthController::class, 'index'])->name('login');
+// Route::get('login', [AuthController::class, 'index'])->name('login');
 
 // Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
