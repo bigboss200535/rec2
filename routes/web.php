@@ -88,11 +88,22 @@ Route::get('/UserProfile', function (){
     return view('User/Profile');
 });
 
+
+Route::get('/Users', function (){
+    return view('User/List');
+});
+
+Route::get('/Permissions', function (){
+    return view('User/Permission');
+});
+
 Route::get('/Payments', function (){
     return view('Monetise/Payments');
 });
 
 Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
+
+// Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 
 
 // Route::get('login', [AuthController::class, 'index'])->name('login');
