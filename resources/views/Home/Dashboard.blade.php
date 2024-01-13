@@ -5,6 +5,7 @@
         <link href="{{ asset('plugins/custom/vis-timeline/vis-timeline.bundle.css') }}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
         <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
     </head>
     <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
         <div class="d-flex flex-column flex-root">
@@ -22,7 +23,7 @@
                             <!--begin::Container-->
                             <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
                                 <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-                                    <h1 class="d-flex align-items-center text-secondary fw-bolder fs-3 my-1 text-dark"><span class="h-20px border-gray-200 border-start ms-3 mx-2"></span><a href="#" class="text-dark">10:01am</a>
+                                    <h1 class="d-flex align-items-center text-secondary fw-bolder fs-3 my-1 text-dark"><span class="h-20px border-gray-200 border-start ms-3 mx-2"></span><a href="#" class="text-dark" id="formattedTime">10:01am</a>
                                         
                                     </h1>
                                 </div>
@@ -1768,6 +1769,11 @@
         <script src="{{ asset('js/custom/utilities/modals/upgrade-plan.js') }}"></script>
         <script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
         <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
+        <script type="text/javascript">
+            var cTime = moment().format('LLLL');
+            // console.log(cTime);
+             document.getElementById('formattedTime').innerText = cTime;
+        </script>
     </body>
     <!--end::Body-->
 </html>

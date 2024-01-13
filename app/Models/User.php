@@ -23,6 +23,10 @@ public function Logout()
       response()->json(['status' => 'success']);
     }
 
+public function viewUsers(){
+     
+    }
+
  public function userLogin(string $username, string $password)
     {
         $user = DB::table('users_accounts')->where('Username', $username)->first();
