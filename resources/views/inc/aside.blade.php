@@ -273,6 +273,14 @@
 											</a>
 										</div>
 										<div class="menu-item">
+											<a class="menu-link" href="/UserRole">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Role</span>
+											</a>
+										</div>
+										<div class="menu-item">
 											<a class="menu-link" href="#">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>

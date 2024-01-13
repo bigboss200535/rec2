@@ -97,6 +97,10 @@ Route::get('/Permissions', function (){
     return view('User/Permission');
 });
 
+Route::get('/UserRole', function (){
+    return view('User/Role');
+});
+
 Route::get('/Payments', function (){
     return view('Monetise/Payments');
 });

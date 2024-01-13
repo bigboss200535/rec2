@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		
 		<title> {{ config('app.name') }} | Tax Payer</title>
-
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
 		<link href="{{ asset('plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
@@ -37,7 +35,7 @@
 										<li class="breadcrumb-item">
 											<span class="bullet bg-gray-300 w-5px h-2px"></span>
 										</li>
-										<li class="breadcrumb-item text-dark">Tax Payer</li>
+										<li class="breadcrumb-item text-dark">{{ $title }}</li>
 									</ul>
 								</div>
 								<div class="d-flex align-items-center gap-2 gap-lg-3">

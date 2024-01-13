@@ -48,17 +48,18 @@
 						</div>
 						<!--end::Toolbar-->
 						<!--begin::Post-->
+<!--begin::Post-->
 						<div class="post d-flex flex-column-fluid" id="kt_post">
 							<!--begin::Container-->
 							<div id="kt_content_container" class="container-xxl">
 								<!--begin::Card-->
-								<div class="card">
+								<div class="card card-flush">
 									<!--begin::Card header-->
-									<div class="card-header border-0 pt-6">
+									<div class="card-header mt-6">
 										<!--begin::Card title-->
 										<div class="card-title">
 											<!--begin::Search-->
-											<div class="d-flex align-items-center position-relative my-1">
+											<div class="d-flex align-items-center position-relative my-1 me-5">
 												<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
 												<span class="svg-icon svg-icon-1 position-absolute ms-6">
 													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -66,569 +67,449 @@
 														<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black" />
 													</svg>
 												</span>
-												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Users" />
+												<!--end::Svg Icon-->
+												<input type="text" data-kt-permissions-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Permissions" />
 											</div>
+											<!--end::Search-->
 										</div>
+										<!--end::Card title-->
+										<!--begin::Card toolbar-->
 										<div class="card-toolbar">
-											<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
-												<div class="w-150px me-3">
-													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
-														<option></option>
-														<option value="all">All</option>
-														<option value="active">Active</option>
-														<option value="locked">Locked</option>
-													</select>
-												</div>
-												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">Add User</button>
-											</div>
-											<div class="d-flex justify-content-end align-items-center d-none" data-kt-customer-table-toolbar="selected">
-												<div class="fw-bolder me-5">
-												<span class="me-2" data-kt-customer-table-select="selected_count"></span>Selected</div>
-												<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected">Delete Selected</button>
-											</div>
+											<!--begin::Button-->
+											<button type="button" class="btn btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_permission">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg-->
+											<span class="svg-icon svg-icon-3">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="black" />
+													<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="black" />
+													<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->Add Permission</button>
+											<!--end::Button-->
 										</div>
+										<!--end::Card toolbar-->
 									</div>
+									<!--end::Card header-->
+									<!--begin::Card body-->
 									<div class="card-body pt-0">
-										<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_customers_table">
+										<!--begin::Table-->
+										<table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="kt_permissions_table">
+											<!--begin::Table head-->
 											<thead>
+												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
-													<th class="w-10px pe-2">
-														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
-														</div>
-													</th>
 													<th class="min-w-125px">Name</th>
-													<th class="min-w-125px">Gender</th>
-													<th class="min-w-125px">Status</th>
-													<th class="min-w-125px">Village</th>
-													<th class="min-w-125px">Neighborhood</th>
+													<th class="min-w-250px">Assigned to</th>
 													<th class="min-w-125px">Created Date</th>
-													<th class="text-end min-w-70px">Actions</th>
+													<th class="text-end min-w-100px">Actions</th>
 												</tr>
+												<!--end::Table row-->
 											</thead>
+											<!--end::Table head-->
+											<!--begin::Table body-->
 											<tbody class="fw-bold text-gray-600">
 												<tr>
+													<!--begin::Name=-->
+													<td>User Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
 													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1" />
-														</div>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
 													</td>
-													<td>Emma Smith</td>
-													<td>smith@kpmg.com</td>
-													<td>TCHALOUDE</td>
-													<td>KONADA </td>
-													<td>25 Oct 2022</td>
-													<td><div class="badge badge-light-success">Active</div></td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>21 Feb 2022, 2:40 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
 													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
-															</svg>
-														</span>
-														</a>
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">View</a>
-															</div>
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-														</div>
-													</td>
-												</tr>													
-												<tr>
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1" />
-														</div>
-													</td>
-													<td>Brian Cox</td>
-													<td>brian@exchange.com</td>
-													<td>TCHALOUDE</td>
-													<td>TIOBA</td>
-													<td>25 Jul 2022</td>
-													<td><div class="badge badge-light-success">Active</div></td>
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
-															</svg>
-														</span>
-														</a>
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">View</a>
-															</div>
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1" />
-														</div>
-													</td>
-													<td>Mikaela Collins</td>
-													<td>mik@pex.com</td>
-													<td>TCHALOUDE</td>
-													<td>LAMAKAZA </td>
-													<td>15 Apr 2022</td>
-													<td><div class="badge badge-light-danger">Locked</div></td>
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
-															</svg>
-														</span>
-														</a>
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">View</a>
-															</div>
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								<!--end::Card-->
-								<!--begin::Modals-->
-								<!--begin::Modal - Customers - Add-->
-								<div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
-									<!--begin::Modal dialog-->
-									<div class="modal-dialog modal-dialog-centered mw-650px">
-										<!--begin::Modal content-->
-										<div class="modal-content">
-											<!--begin::Form-->
-											<form class="form" action="#" id="kt_modal_add_customer_form" data-kt-redirect="#">
-												<div class="modal-header" id="kt_modal_add_customer_header">
-													<!--begin::Modal title-->
-													<h2 class="fw-bolder">Add a User</h2>
-													<!--end::Modal title-->
-													<!--begin::Close-->
-													<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-														<span class="svg-icon svg-icon-1">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-															</svg>
-														</span>
-														<!--end::Svg Icon-->
-													</div>
-													<!--end::Close-->
-												</div>
-												<!--end::Modal header-->
-												<!--begin::Modal body-->
-												<div class="modal-body py-10 px-lg-17">
-													<!--begin::Scroll-->
-													<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_customer_header" data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
-														<!--begin::Input group-->
-														<div class="fv-row mb-7">
-															<!--begin::Label-->
-															<label class="required fs-6 fw-bold mb-2">Name</label>
-															<!--end::Label-->
-															<!--begin::Input-->
-															<input type="text" class="form-control form-control-solid" placeholder="" name="name" value="Sean Bean" />
-															<!--end::Input-->
-														</div>
-														<!--end::Input group-->
-														<!--begin::Input group-->
-														<div class="fv-row mb-7">
-															<!--begin::Label-->
-															<label class="fs-6 fw-bold mb-2">
-																<span class="required">Email</span>
-																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Email address must be active"></i>
-															</label>
-															<!--end::Label-->
-															<!--begin::Input-->
-															<input type="email" class="form-control form-control-solid" placeholder="" name="email" value="sean@dellito.com" />
-															<!--end::Input-->
-														</div>
-														<!--end::Input group-->
-														<!--begin::Input group-->
-														<div class="fv-row mb-15">
-															<!--begin::Label-->
-															<label class="fs-6 fw-bold mb-2">Description</label>
-															<!--end::Label-->
-															<!--begin::Input-->
-															<input type="text" class="form-control form-control-solid" placeholder="" name="description" />
-															<!--end::Input-->
-														</div>
-														<!--end::Input group-->
-														<!--begin::Billing toggle-->
-														<div class="fw-bolder fs-3 rotate collapsible mb-7" data-bs-toggle="collapse" href="#kt_modal_add_customer_billing_info" role="button" aria-expanded="false" aria-controls="kt_customer_view_details">Shipping Information
-														<span class="ms-2 rotate-180">
-															<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 															<span class="svg-icon svg-icon-3">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
-														</span></div>
-														<!--end::Billing toggle-->
-														<!--begin::Billing form-->
-														<div id="kt_modal_add_customer_billing_info" class="collapse show">
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="required fs-6 fw-bold mb-2">Address Line 1</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="address1" value="101, Collins Street" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="fs-6 fw-bold mb-2">Address Line 2</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="address2" value="" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="required fs-6 fw-bold mb-2">Town</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="city" value="Melbourne" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="row g-9 mb-7">
-																<!--begin::Col-->
-																<div class="col-md-6 fv-row">
-																	<!--begin::Label-->
-																	<label class="required fs-6 fw-bold mb-2">State / Province</label>
-																	<!--end::Label-->
-																	<!--begin::Input-->
-																	<input class="form-control form-control-solid" placeholder="" name="state" value="Victoria" />
-																	<!--end::Input-->
-																</div>
-																<!--end::Col-->
-																<!--begin::Col-->
-																<div class="col-md-6 fv-row">
-																	<!--begin::Label-->
-																	<label class="required fs-6 fw-bold mb-2">Post Code</label>
-																	<!--end::Label-->
-																	<!--begin::Input-->
-																	<input class="form-control form-control-solid" placeholder="" name="postcode" value="3000" />
-																	<!--end::Input-->
-																</div>
-																<!--end::Col-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="fs-6 fw-bold mb-2">
-																	<span class="required">Country</span>
-																	<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
-																</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." data-dropdown-parent="#kt_modal_add_customer" class="form-select form-select-solid fw-bolder">
-																	<option value="">Select a Country...</option>
-																	<option value="AF">Afghanistan</option>
-																	<option value="AX">Aland Islands</option>
-																	<option value="AL">Albania</option>
-																	<option value="DZ">Algeria</option>
-																	<option value="AS">American Samoa</option>
-																	<option value="AD">Andorra</option>
-																	<option value="AO">Angola</option>
-																	<option value="AI">Anguilla</option>
-																	<option value="AG">Antigua and Barbuda</option>
-																	<option value="AR">Argentina</option>
-																	<option value="AM">Armenia</option>
-																	<option value="AW">Aruba</option>
-																	<option value="AU">Australia</option>
-																	<option value="AT">Austria</option>
-																	<option value="AZ">Azerbaijan</option>
-																	<option value="BS">Bahamas</option>
-																	<option value="BH">Bahrain</option>
-																	<option value="BD">Bangladesh</option>
-																	<option value="BB">Barbados</option>
-																	<option value="BY">Belarus</option>
-																	<option value="BE">Belgium</option>
-																	<option value="BZ">Belize</option>
-																	<option value="BJ">Benin</option>
-																	<option value="BM">Bermuda</option>
-																	<option value="BT">Bhutan</option>
-																	<option value="BO">Bolivia, Plurinational State of</option>
-																	<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-																	<option value="BA">Bosnia and Herzegovina</option>
-																	<option value="BW">Botswana</option>
-																	<option value="BR">Brazil</option>
-																	<option value="IO">British Indian Ocean Territory</option>
-																	<option value="BN">Brunei Darussalam</option>
-																	<option value="BG">Bulgaria</option>
-																	<option value="BF">Burkina Faso</option>
-																	<option value="BI">Burundi</option>
-																	<option value="KH">Cambodia</option>
-																	<option value="CM">Cameroon</option>
-																	<option value="CA">Canada</option>
-																	<option value="CV">Cape Verde</option>
-																	<option value="KY">Cayman Islands</option>
-																	<option value="CF">Central African Republic</option>
-																	<option value="TD">Chad</option>
-																	<option value="CL">Chile</option>
-																	<option value="CN">China</option>
-																	<option value="CX">Christmas Island</option>
-																	<option value="CC">Cocos (Keeling) Islands</option>
-																	<option value="CO">Colombia</option>
-																	<option value="KM">Comoros</option>
-																	<option value="CK">Cook Islands</option>
-																	<option value="CR">Costa Rica</option>
-																	<option value="CI">Côte d'Ivoire</option>
-																	<option value="HR">Croatia</option>
-																	<option value="CU">Cuba</option>
-																	<option value="CW">Curaçao</option>
-																	<option value="CZ">Czech Republic</option>
-																	<option value="DK">Denmark</option>
-																	<option value="DJ">Djibouti</option>
-																	<option value="DM">Dominica</option>
-																	<option value="DO">Dominican Republic</option>
-																	<option value="EC">Ecuador</option>
-																	<option value="EG">Egypt</option>
-																	<option value="SV">El Salvador</option>
-																	<option value="GQ">Equatorial Guinea</option>
-																	<option value="ER">Eritrea</option>
-																	<option value="EE">Estonia</option>
-																	<option value="ET">Ethiopia</option>
-																	<option value="FK">Falkland Islands (Malvinas)</option>
-																	<option value="FJ">Fiji</option>
-																	<option value="FI">Finland</option>
-																	<option value="FR">France</option>
-																	<option value="PF">French Polynesia</option>
-																	<option value="GA">Gabon</option>
-																	<option value="GM">Gambia</option>
-																	<option value="GE">Georgia</option>
-																	<option value="DE">Germany</option>
-																	<option value="GH">Ghana</option>
-																	<option value="GI">Gibraltar</option>
-																	<option value="GR">Greece</option>
-																	<option value="GL">Greenland</option>
-																	<option value="GD">Grenada</option>
-																	<option value="GU">Guam</option>
-																	<option value="GT">Guatemala</option>
-																	<option value="GG">Guernsey</option>
-																	<option value="GN">Guinea</option>
-																	<option value="GW">Guinea-Bissau</option>
-																	<option value="HT">Haiti</option>
-																	<option value="VA">Holy See (Vatican City State)</option>
-																	<option value="HN">Honduras</option>
-																	<option value="HK">Hong Kong</option>
-																	<option value="HU">Hungary</option>
-																	<option value="IS">Iceland</option>
-																	<option value="IN">India</option>
-																	<option value="ID">Indonesia</option>
-																	<option value="IR">Iran, Islamic Republic of</option>
-																	<option value="IQ">Iraq</option>
-																	<option value="IE">Ireland</option>
-																	<option value="IM">Isle of Man</option>
-																	<option value="IL">Israel</option>
-																	<option value="IT">Italy</option>
-																	<option value="JM">Jamaica</option>
-																	<option value="JP">Japan</option>
-																	<option value="JE">Jersey</option>
-																	<option value="JO">Jordan</option>
-																	<option value="KZ">Kazakhstan</option>
-																	<option value="KE">Kenya</option>
-																	<option value="KI">Kiribati</option>
-																	<option value="KP">Korea, Democratic People's Republic of</option>
-																	<option value="KW">Kuwait</option>
-																	<option value="KG">Kyrgyzstan</option>
-																	<option value="LA">Lao People's Democratic Republic</option>
-																	<option value="LV">Latvia</option>
-																	<option value="LB">Lebanon</option>
-																	<option value="LS">Lesotho</option>
-																	<option value="LR">Liberia</option>
-																	<option value="LY">Libya</option>
-																	<option value="LI">Liechtenstein</option>
-																	<option value="LT">Lithuania</option>
-																	<option value="LU">Luxembourg</option>
-																	<option value="MO">Macao</option>
-																	<option value="MG">Madagascar</option>
-																	<option value="MW">Malawi</option>
-																	<option value="MY">Malaysia</option>
-																	<option value="MV">Maldives</option>
-																	<option value="ML">Mali</option>
-																	<option value="MT">Malta</option>
-																	<option value="MH">Marshall Islands</option>
-																	<option value="MQ">Martinique</option>
-																	<option value="MR">Mauritania</option>
-																	<option value="MU">Mauritius</option>
-																	<option value="MX">Mexico</option>
-																	<option value="FM">Micronesia, Federated States of</option>
-																	<option value="MD">Moldova, Republic of</option>
-																	<option value="MC">Monaco</option>
-																	<option value="MN">Mongolia</option>
-																	<option value="ME">Montenegro</option>
-																	<option value="MS">Montserrat</option>
-																	<option value="MA">Morocco</option>
-																	<option value="MZ">Mozambique</option>
-																	<option value="MM">Myanmar</option>
-																	<option value="NA">Namibia</option>
-																	<option value="NR">Nauru</option>
-																	<option value="NP">Nepal</option>
-																	<option value="NL">Netherlands</option>
-																	<option value="NZ">New Zealand</option>
-																	<option value="NI">Nicaragua</option>
-																	<option value="NE">Niger</option>
-																	<option value="NG">Nigeria</option>
-																	<option value="NU">Niue</option>
-																	<option value="NF">Norfolk Island</option>
-																	<option value="MP">Northern Mariana Islands</option>
-																	<option value="NO">Norway</option>
-																	<option value="OM">Oman</option>
-																	<option value="PK">Pakistan</option>
-																	<option value="PW">Palau</option>
-																	<option value="PS">Palestinian Territory, Occupied</option>
-																	<option value="PA">Panama</option>
-																	<option value="PG">Papua New Guinea</option>
-																	<option value="PY">Paraguay</option>
-																	<option value="PE">Peru</option>
-																	<option value="PH">Philippines</option>
-																	<option value="PL">Poland</option>
-																	<option value="PT">Portugal</option>
-																	<option value="PR">Puerto Rico</option>
-																	<option value="QA">Qatar</option>
-																	<option value="RO">Romania</option>
-																	<option value="RU">Russian Federation</option>
-																	<option value="RW">Rwanda</option>
-																	<option value="BL">Saint Barthélemy</option>
-																	<option value="KN">Saint Kitts and Nevis</option>
-																	<option value="LC">Saint Lucia</option>
-																	<option value="MF">Saint Martin (French part)</option>
-																	<option value="VC">Saint Vincent and the Grenadines</option>
-																	<option value="WS">Samoa</option>
-																	<option value="SM">San Marino</option>
-																	<option value="ST">Sao Tome and Principe</option>
-																	<option value="SA">Saudi Arabia</option>
-																	<option value="SN">Senegal</option>
-																	<option value="RS">Serbia</option>
-																	<option value="SC">Seychelles</option>
-																	<option value="SL">Sierra Leone</option>
-																	<option value="SG">Singapore</option>
-																	<option value="SX">Sint Maarten (Dutch part)</option>
-																	<option value="SK">Slovakia</option>
-																	<option value="SI">Slovenia</option>
-																	<option value="SB">Solomon Islands</option>
-																	<option value="SO">Somalia</option>
-																	<option value="ZA">South Africa</option>
-																	<option value="KR">South Korea</option>
-																	<option value="SS">South Sudan</option>
-																	<option value="ES">Spain</option>
-																	<option value="LK">Sri Lanka</option>
-																	<option value="SD">Sudan</option>
-																	<option value="SR">Suriname</option>
-																	<option value="SZ">Swaziland</option>
-																	<option value="SE">Sweden</option>
-																	<option value="CH">Switzerland</option>
-																	<option value="SY">Syrian Arab Republic</option>
-																	<option value="TW">Taiwan, Province of China</option>
-																	<option value="TJ">Tajikistan</option>
-																	<option value="TZ">Tanzania, United Republic of</option>
-																	<option value="TH">Thailand</option>
-																	<option value="TG">Togo</option>
-																	<option value="TK">Tokelau</option>
-																	<option value="TO">Tonga</option>
-																	<option value="TT">Trinidad and Tobago</option>
-																	<option value="TN">Tunisia</option>
-																	<option value="TR">Turkey</option>
-																	<option value="TM">Turkmenistan</option>
-																	<option value="TC">Turks and Caicos Islands</option>
-																	<option value="TV">Tuvalu</option>
-																	<option value="UG">Uganda</option>
-																	<option value="UA">Ukraine</option>
-																	<option value="AE">United Arab Emirates</option>
-																	<option value="GB">United Kingdom</option>
-																	<option value="US" selected="selected">United States</option>
-																	<option value="UY">Uruguay</option>
-																	<option value="UZ">Uzbekistan</option>
-																	<option value="VU">Vanuatu</option>
-																	<option value="VE">Venezuela, Bolivarian Republic of</option>
-																	<option value="VN">Vietnam</option>
-																	<option value="VI">Virgin Islands</option>
-																	<option value="YE">Yemen</option>
-																	<option value="ZM">Zambia</option>
-																	<option value="ZW">Zimbabwe</option>
-																</select>
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="fv-row mb-7">
-																<!--begin::Wrapper-->
-																<div class="d-flex flex-stack">
-																	<!--begin::Label-->
-																	<div class="me-5">
-																		<!--begin::Label-->
-																		<label class="fs-6 fw-bold">Use as a billing adderess?</label>
-																		<!--end::Label-->
-																		<!--begin::Input-->
-																		<div class="fs-7 fw-bold text-muted">If you need more info, please check budget planning</div>
-																		<!--end::Input-->
-																	</div>
-																	<!--end::Label-->
-																	<!--begin::Switch-->
-																	<label class="form-check form-switch form-check-custom form-check-solid">
-																		<!--begin::Input-->
-																		<input class="form-check-input" name="billing" type="checkbox" value="1" id="kt_modal_add_customer_billing" checked="checked" />
-																		<!--end::Input-->
-																		<!--begin::Label-->
-																		<span class="form-check-label fw-bold text-muted" for="kt_modal_add_customer_billing">Yes</span>
-																		<!--end::Label-->
-																	</label>
-																	<!--end::Switch-->
-																</div>
-																<!--begin::Wrapper-->
-															</div>
-															<!--end::Input group-->
-														</div>
-														<!--end::Billing form-->
-													</div>
-													<!--end::Scroll-->
-												</div>
-												<!--end::Modal body-->
-												<!--begin::Modal footer-->
-												<div class="modal-footer flex-center">
-													<!--begin::Button-->
-													<button type="reset" id="kt_modal_add_customer_cancel" class="btn btn-light me-3">Discard</button>
-													<!--end::Button-->
-													<!--begin::Button-->
-													<button type="submit" id="kt_modal_add_customer_submit" class="btn btn-primary">
-														<span class="indicator-label">Submit</span>
-														<span class="indicator-progress">Please wait...
-														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-													</button>
-													<!--end::Button-->
-												</div>
-												<!--end::Modal footer-->
-											</form>
-											<!--end::Form-->
-										</div>
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Content Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-danger fs-7 m-1">Developer</a>
+														<a href="#" class="badge badge-light-success fs-7 m-1">Analyst</a>
+														<a href="#" class="badge badge-light-info fs-7 m-1">Support</a>
+														<a href="#" class="badge badge-light-warning fs-7 m-1">Trial</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>15 Apr 2022, 10:10 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Financial Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-success fs-7 m-1">Analyst</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>20 Dec 2022, 10:10 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Reporting</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-success fs-7 m-1">Analyst</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>10 Nov 2022, 8:43 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Payroll</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-success fs-7 m-1">Analyst</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>22 Sep 2022, 9:23 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Disputes Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-danger fs-7 m-1">Developer</a>
+														<a href="#" class="badge badge-light-info fs-7 m-1">Support</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>20 Dec 2022, 10:30 am</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>API Controls</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-danger fs-7 m-1">Developer</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>25 Oct 2022, 2:40 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Database Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-danger fs-7 m-1">Developer</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>05 May 2022, 5:20 pm</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+												<tr>
+													<!--begin::Name=-->
+													<td>Repository Management</td>
+													<!--end::Name=-->
+													<!--begin::Assigned to=-->
+													<td>
+														<a href="#" class="badge badge-light-primary fs-7 m-1">Administrator</a>
+														<a href="#" class="badge badge-light-danger fs-7 m-1">Developer</a>
+													</td>
+													<!--end::Assigned to=-->
+													<!--begin::Created Date-->
+													<td>24 Jun 2022, 6:43 am</td>
+													<!--end::Created Date-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<!--begin::Update-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_update_permission">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="black" />
+																	<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Update-->
+														<!--begin::Delete-->
+														<button class="btn btn-icon btn-active-light-primary w-30px h-30px" data-kt-permissions-table-filter="delete_row">
+															<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+															<span class="svg-icon svg-icon-3">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="black" />
+																	<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="black" />
+																	<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="black" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</button>
+														<!--end::Delete-->
+													</td>
+													<!--end::Action=-->
+												</tr>
+											</tbody>
+											<!--end::Table body-->
+										</table>
+										<!--end::Table-->
 									</div>
+									<!--end::Card body-->
 								</div>
-								<!--end::Modal - Customers - Add-->
-								<!--begin::Modal - Adjust Balance-->
-								<div class="modal fade" id="kt_customers_export_modal" tabindex="-1" aria-hidden="true">
+								<!--end::Card-->
+								<!--begin::Modals-->
+								<!--begin::Modal - Add permissions-->
+								<div class="modal fade" id="kt_modal_add_permission" tabindex="-1" aria-hidden="true">
 									<!--begin::Modal dialog-->
 									<div class="modal-dialog modal-dialog-centered mw-650px">
 										<!--begin::Modal content-->
@@ -636,10 +517,10 @@
 											<!--begin::Modal header-->
 											<div class="modal-header">
 												<!--begin::Modal title-->
-												<h2 class="fw-bolder">Export Users</h2>
+												<h2 class="fw-bolder">Add a Permission</h2>
 												<!--end::Modal title-->
 												<!--begin::Close-->
-												<div id="kt_customers_export_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+												<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-permissions-modal-action="close">
 													<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
 													<span class="svg-icon svg-icon-1">
 														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -652,17 +533,154 @@
 												<!--end::Close-->
 											</div>
 											<!--end::Modal header-->
-											
+											<!--begin::Modal body-->
+											<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+												<!--begin::Form-->
+												<form id="kt_modal_add_permission_form" class="form" action="#">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-bold form-label mb-2">
+															<span class="required">Permission Name</span>
+															<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Permission names is required to be unique."></i>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input class="form-control form-control-solid" placeholder="Enter a permission name" name="permission_name" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Checkbox-->
+														<label class="form-check form-check-custom form-check-solid me-9">
+															<input class="form-check-input" type="checkbox" value="" name="permissions_core" id="kt_permissions_core" />
+															<span class="form-check-label" for="kt_permissions_core">Set as core permission</span>
+														</label>
+														<!--end::Checkbox-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Disclaimer-->
+													<div class="text-gray-600">Permission set as a
+													<strong class="me-1">Core Permission</strong>will be locked and
+													<strong class="me-1">not editable</strong>in future</div>
+													<!--end::Disclaimer-->
+													<!--begin::Actions-->
+													<div class="text-center pt-15">
+														<button type="reset" class="btn btn-light me-3" data-kt-permissions-modal-action="cancel">Discard</button>
+														<button type="submit" class="btn btn-primary" data-kt-permissions-modal-action="submit">
+															<span class="indicator-label">Submit</span>
+															<span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+														</button>
+													</div>
+													<!--end::Actions-->
+												</form>
+												<!--end::Form-->
+											</div>
+											<!--end::Modal body-->
 										</div>
 										<!--end::Modal content-->
 									</div>
 									<!--end::Modal dialog-->
 								</div>
-								<!--end::Modal - New Card-->
+								<!--end::Modal - Add permissions-->
+								<!--begin::Modal - Update permissions-->
+								<div class="modal fade" id="kt_modal_update_permission" tabindex="-1" aria-hidden="true">
+									<!--begin::Modal dialog-->
+									<div class="modal-dialog modal-dialog-centered mw-650px">
+										<!--begin::Modal content-->
+										<div class="modal-content">
+											<!--begin::Modal header-->
+											<div class="modal-header">
+												<!--begin::Modal title-->
+												<h2 class="fw-bolder">Update Permission</h2>
+												<!--end::Modal title-->
+												<!--begin::Close-->
+												<div class="btn btn-icon btn-sm btn-active-icon-primary" data-kt-permissions-modal-action="close">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+													<span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+															<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->
+												</div>
+												<!--end::Close-->
+											</div>
+											<!--end::Modal header-->
+											<!--begin::Modal body-->
+											<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+												<!--begin::Notice-->
+												<!--begin::Notice-->
+												<div class="notice d-flex bg-light-warning rounded border-warning border border-dashed mb-9 p-6">
+													<!--begin::Icon-->
+													<!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+													<span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="black" />
+															<rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="black" />
+														</svg>
+													</span>
+													<!--end::Svg Icon-->
+													<!--end::Icon-->
+													<!--begin::Wrapper-->
+													<div class="d-flex flex-stack flex-grow-1">
+														<!--begin::Content-->
+														<div class="fw-bold">
+															<div class="fs-6 text-gray-700">
+															<strong class="me-1">Warning!</strong>By editing the permission name, you might break the system permissions functionality. Please ensure you're absolutely certain before proceeding.</div>
+														</div>
+														<!--end::Content-->
+													</div>
+													<!--end::Wrapper-->
+												</div>
+												<!--end::Notice-->
+												<!--end::Notice-->
+												<!--begin::Form-->
+												<form id="kt_modal_update_permission_form" class="form" action="#">
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<!--begin::Label-->
+														<label class="fs-6 fw-bold form-label mb-2">
+															<span class="required">Permission Name</span>
+															<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Permission names is required to be unique."></i>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input class="form-control form-control-solid" placeholder="Enter a permission name" name="permission_name" />
+														<!--end::Input-->
+													</div>
+													<!--end::Input group-->
+													<!--begin::Actions-->
+													<div class="text-center pt-15">
+														<button type="reset" class="btn btn-light me-3" data-kt-permissions-modal-action="cancel">Discard</button>
+														<button type="submit" class="btn btn-primary" data-kt-permissions-modal-action="submit">
+															<span class="indicator-label">Submit</span>
+															<span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+														</button>
+													</div>
+													<!--end::Actions-->
+												</form>
+												<!--end::Form-->
+											</div>
+											<!--end::Modal body-->
+										</div>
+										<!--end::Modal content-->
+									</div>
+									<!--end::Modal dialog-->
+								</div>
+								<!--end::Modal - Update permissions-->
 								<!--end::Modals-->
 							</div>
 							<!--end::Container-->
 						</div>
+
+
+
 						<!--end::Post-->
 					</div>
 					<!--end::Content-->
@@ -688,6 +706,9 @@
 		<script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
 		<script src="{{ asset('js/scripts.bundle.js') }}"></script>
 		<script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
+		<script src="{{ asset('js/custom/apps/user-management/permissions/list.js') }}"></script>
+		<script src="{{ asset('js/custom/apps/user-management/permissions/add-permission.js') }}"></script>
+		<script src="{{ asset('js/custom/apps/user-management/permissions/update-permission.js') }}"></script>
 		<script src="{{ asset('js/custom/apps/ecommerce/customers/listing/listing.js') }}"></script>
 		<script src="{{ asset('js/custom/apps/ecommerce/customers/listing/add.js') }}"></script>
 		<script src="{{ asset('js/custom/apps/ecommerce/customers/listing/export.js') }}"></script>
