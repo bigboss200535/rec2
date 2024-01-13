@@ -44,6 +44,8 @@ Route::get('/AddPayer', function (){
     return view('Payer/AddPayer');
 });
 
+
+
 // view tax payers
 Route::get('/viewpayer', function (){
     return view('Payer/ListPayers');
@@ -117,3 +119,6 @@ Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 // Route::get('AddPayer', [CustomerController::class, 'index']);
 
 // Route::get('bill', [AuthController::class, 'logout'])->name('logout');
+// Route::get('AddPayer','PayerController@home');
+
+Route::get('table', 'PayerController@home')->name('table');
