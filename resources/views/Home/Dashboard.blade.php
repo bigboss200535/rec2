@@ -1771,7 +1771,7 @@
         <script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
         <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
         <script type="text/javascript">
-            var cTime = moment().format('LLLL');
+            var cTime = moment().format('LTS');
             // console.log(cTime);
              document.getElementById('formattedTime').innerText = cTime;
         </script>

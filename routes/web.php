@@ -124,3 +124,8 @@ Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 
 
 Route::get('/AddPayer', [PayerController::class, 'getAllPayers']);
+
+Route::get('/locale/{locale}', function (Request $request, $locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+})->name('locale');
