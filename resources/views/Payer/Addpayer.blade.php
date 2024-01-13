@@ -7,6 +7,12 @@
 		<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link rel="../shortcut icon" href="{{ asset('media/logo.png') }}"/>
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.11.7/css/dataTables.bootstrap4.min.css">
+
+<!-- Add these lines before the closing body tag -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.11.7/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.11.7/js/dataTables.bootstrap4.min.js"></script>
 		
 	</head>
 	<!--end::Head-->
@@ -66,7 +72,7 @@
 														<option></option>
 														<option value="all">All</option>
 														<option value="active">Active</option>
-														<option value="locked">Locked</option>
+														<option value="locked">Inactive</option>
 													</select>
 												</div>
 												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">Add Payer</button>
@@ -84,20 +90,20 @@
 												<tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
 													<th class="w-10px pe-2" disable>
 														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-															<!-- <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" disabled/> -->
+															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" disabled/>
 														</div>
 													</th>
 													<th class="min-w-125px">Name</th>
 													<th class="min-w-125px">Gender</th>
 													<th class="min-w-125px">Status</th>
-													<th class="min-w-125px">Village</th>
-													<th class="min-w-125px">Neighborhood</th>
+													<th class="min-w-125px">Telephone</th>
+													<th class="min-w-125px">National ID</th>
 													<th class="min-w-125px">Created Date</th>
 													<th class="text-end min-w-70px">Actions</th>
 												</tr>
 											</thead>
 											<tbody class="fw-bold text-gray-600">
-												
+												 @foreach($payers as $payer)
 												<tr>
 													<td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -105,15 +111,15 @@
 														</div>
 													</td>
 													<td>
-														
+														{{ $payer->Fullname  }}
 													</td>
-													<td>Male</td>
+													<td>{{ $payer->GenderId }}</td>
 													<td>
-														<div class="badge badge-light-success"></div>
+														<div class="badge badge-light-success">{{ $payer->Status }}</div>
 													</td>
-													<td></td>
-													<td> </td>
-													<td></td>
+													<td>{{ $payer->Telephone1 }}</td>
+													<td> {{ $payer->NationalIdNumber }}</td>
+													<td>{{ \Carbon\Carbon::parse($payer->AddedDate)->format('Y-m-d') }}</td>
 													<td class="text-end">
 														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
 														<span class="svg-icon svg-icon-5 m-0">
@@ -132,7 +138,7 @@
 														</div>
 													</td>
 												</tr>	
-											
+											@endforeach
 											</tbody>
 										</table>
 									</div>
@@ -359,6 +365,12 @@
 		<script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script>
 	</body>
+	 <script>
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#kt_customers_table').DataTable();
+        });
+    </script>
 	<script type="text/javascript">
  	 $(function () {
     

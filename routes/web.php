@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PayerController;
 // use App\Http\Controller\CustomerController;
 
 /*
@@ -40,9 +41,9 @@ Route::get('/adduser', function (){
 });
  
  // add payers 
-Route::get('/AddPayer', function (){
-    return view('Payer/AddPayer');
-});
+// Route::get('/AddPayer', function (){
+//     return view('Payer/AddPayer');
+// });
 
 
 
@@ -122,3 +123,6 @@ Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 // Route::get('AddPayer','PayerController@home');
 
 Route::get('table', 'PayerController@home')->name('table');
+
+
+Route::get('/AddPayer', [PayerController::class, 'getAllPayers']);

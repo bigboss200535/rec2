@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Payer extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+     protected $table = 'tax_payer';
 }
