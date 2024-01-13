@@ -35,7 +35,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Customer</span>
+										<span class="menu-title">Tax Payer</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -44,7 +44,7 @@
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Customers</span>
+												<span class="menu-title">List</span>
 											</a>
 										</div>
 										<!-- <div class="menu-item">
@@ -67,7 +67,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Invoices</span>
+										<span class="menu-title">Invoice</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -108,7 +108,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Payments</span>
+										<span class="menu-title">Revenue</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -154,29 +154,29 @@
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
 										<div class="menu-item">
-											<a class="menu-link" href="/Invoices">
+											<a class="menu-link" href="#">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Make Payments</span>
+												<span class="menu-title">General Reports</span>
 											</a>
 										</div>
-										<!-- <div class="menu-item">
-											<a class="menu-link" href="/RejectInvoices">
+										<div class="menu-item">
+											<a class="menu-link" href="#">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Returns</span>
+												<span class="menu-title">Administrative Reports</span>
 											</a>
-										</div> -->
-										<!-- <div class="menu-item">
-													<a class="menu-link" href="/SuccessInvoices">
+										</div>
+										<div class="menu-item">
+													<a class="menu-link" href="#">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
 														<span class="menu-title">Done</span>
 													</a>
-												</div> -->
+												</div>
 									</div>
 								</div>
 

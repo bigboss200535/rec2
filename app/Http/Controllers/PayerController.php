@@ -13,7 +13,7 @@ class PayerController extends Controller
     {
         // fetch all tax_payers which are active and not soft deleted
         $payers = Payer::rightJoin('gender', 'gender.GenderId', '=', 'tax_payer.GenderId')
-        ->where('tax_payer.Status', 'ACTIVE')
+        // ->where('tax_payer.Status', 'ACTIVE')
         ->where('tax_payer.Archived', 'NO')
         ->where('gender.Differential', '0')
         ->select('tax_payer.*', 'gender.GenderId as GenderId', 'gender.GenderName')
