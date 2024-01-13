@@ -122,7 +122,5 @@ Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 // Route::get('bill', [AuthController::class, 'logout'])->name('logout');
 // Route::get('AddPayer','PayerController@home');
 
-Route::get('table', 'PayerController@home')->name('table');
-
 
 Route::get('/AddPayer', [PayerController::class, 'getAllPayers']);
