@@ -115,10 +115,20 @@
 													</td>
 													<td>{{ $payer->GenderName }}</td>
 													<td>
-														<div class="badge badge-light-success">{{ $payer->Status }}</div>
+														@if ($payer->Status === 'ACTIVE')
+                											<div class="badge badge-light-success">ACTIVE</div>
+            											@else
+                											<div class="badge badge-light-danger">INACTIVE</div>
+														@endif
 													</td>
 													<td>{{ $payer->Telephone1 }}</td>
-													<td> {{ $payer->NationalIdNumber }}</td>
+													<td> 
+													@if ($payer->NationalIdNumber)
+                										{{ $payer->NationalIdNumber }}
+            										@else
+                										N/A
+            										@endif
+													</td>
 													<td>{{ \Carbon\Carbon::parse($payer->AddedDate)->format('Y-m-d') }}</td>
 													<td class="text-end">
 														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -130,10 +140,10 @@
 														</a>
 														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
 															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">View</a>
+																<a href="#" class="menu-link px-3" data-payer-id="{{ $payer->TaxPayerId }}">View</a>
 															</div>
 															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row" data-payer-id="{{ $payer->TaxPayerId }}">Delete</a>
 															</div>
 														</div>
 													</td>
@@ -372,20 +382,28 @@
         });
     </script>
 	<script type="text/javascript">
- 	 $(function () {
-    
-    	var table = $('.data-table').DataTable({
-	        processing: true,
-	        serverSide: true,
-	        ajax: "{{ route('table') }}",
-	        columns: [
-	            {data: 'p_id', name: 'p_id'},
-	            {data: 'name', name: 'name'},
-	            {data: 'price', name: 'price'},         
-	        ]
-	    });
-	    
-	  });
+ 	 $(document).ready(function () {
+    $('[data-kt-customer-table-filter="delete_row"]').on('click', function (e) {
+        e.preventDefault();
+
+        var payerId = $(this).data('payer-id');
+
+        // Add logic to confirm deletion and make an AJAX request to delete the payer
+        // Example: You can use the payerId to make an AJAX request to your delete endpoint
+        // $.ajax({
+        //    method: 'DELETE',
+        //    url: '/delete-payer/' + payerId,
+        //    success: function (response) {
+        //        // Handle success, e.g., remove the row from the table
+        //        $(this).closest('tr').remove();
+        //    },
+        //    error: function (error) {
+        //        // Handle error
+        //        console.error(error);
+        //    }
+        // });
+    });
+});
 </script>
 	<script type="text/javascript">
     "use strict";
