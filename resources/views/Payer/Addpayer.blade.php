@@ -113,7 +113,7 @@
 													<td>
 														{{ $payer->Fullname  }}
 													</td>
-													<td>{{ $payer->GenderId }}</td>
+													<td>{{ $payer->GenderName }}</td>
 													<td>
 														<div class="badge badge-light-success">{{ $payer->Status }}</div>
 													</td>
