@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,14 +42,14 @@
                                         <div class="card h-md-100">
                                             <div class="card-body d-flex flex-column flex-center">
                                                 <div class="mb-2">
-                                                    <h1 class="fw-bold text-gray-800 text-center lh-lg">Hello,
+                                                    <h1 class="fw-bold text-gray-800 text-center lh-lg">{{ __('hello') }},
                                                     <br />
-                                                    <span class="fw-boldest"><?php ;?></span></h1>
+                                                    <span class="fw-boldest"><?php echo 'Administrator' ;?></span></h1>
                                                     <div class="flex-grow-1 bgi-no-repeat bgi-size-contain bgi-position-x-center card-rounded-bottom h-200px mh-200px my-5 my-lg-12" style="background-image:url("{{ asset('media/svg/illustrations/easy/4.svg') }}""></div>
                                                 </div>
                                                 <div class="text-center">
-                                                    <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_view_users" data-bs-toggle="modal">Make Payment</a>
-                                                    <a class="btn btn-sm btn-light" href="#">Quick Guide</a>
+                                                    <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_view_users" data-bs-toggle="modal">{{ __('make_payment') }}</a>
+                                                    <a class="btn btn-sm btn-light" href="#">{{ __('quick_guide') }}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -63,7 +64,7 @@
                                                                 <span class="fs-2hx fw-bolder text-gray-800 me-2 lh-1">47,769,700</span>
                                                                 <span class="d-flex align-items-end text-gray-400 fs-6 fw-bold">CFA</span>
                                                             </div>
-                                                            <span class="fs-6 fw-bold text-gray-400">Total Payments this Month</span>
+                                                            <span class="fs-6 fw-bold text-gray-400">{{ __('payment_month') }}</span>
                                                         </div>
                                                         <div id="kt_card_widget_8_chart" class="min-h-auto" style="height: 125px"></div>
                                                     </div>
@@ -72,7 +73,7 @@
                                                     <div class="card-header pt-5">
                                                         <div class="card-title d-flex flex-column">
                                                             <span class="fs-2hx fw-bolder text-dark me-2 lh-1">69,700</span>
-                                                            <span class="text-gray-400 pt-1 fw-bold fs-6">Expected Revenue This Month</span>
+                                                            <span class="text-gray-400 pt-1 fw-bold fs-6">{{ __('expected_revenue') }}</span>
                                                         </div>
                                                     </div>
                                                     <div class="card-body d-flex align-items-end pt-0">
@@ -83,13 +84,13 @@
                                                             <div class="d-flex flex-column content-justify-center flex-grow-1">
                                                                 <div class="d-flex fs-6 fw-bold align-items-center">
                                                                     <div class="bullet w-8px h-6px rounded-2 bg-success me-3"></div>
-                                                                    <div class="fs-6 fw-bold text-gray-400 flex-shrink-0">Car Tickets</div>
+                                                                    <div class="fs-6 fw-bold text-gray-400 flex-shrink-0">{{ __('car_tickets') }}</div>
                                                                     <div class="separator separator-dashed min-w-10px flex-grow-1 mx-2"></div>
                                                                     <div class="ms-auto fw-boldest text-gray-700 text-end">45%</div>
                                                                 </div>
                                                                 <div class="d-flex fs-6 fw-bold align-items-center my-1">
                                                                     <div class="bullet w-8px h-6px rounded-2 bg-primary me-3"></div>
-                                                                    <div class="fs-6 fw-bold text-gray-400 flex-shrink-0">General Tax</div>
+                                                                    <div class="fs-6 fw-bold text-gray-400 flex-shrink-0">{{ __('general_tax') }}</div>
                                                                     <div class="separator separator-dashed min-w-10px flex-grow-1 mx-2"></div>
                                                                     <div class="ms-auto fw-boldest text-gray-700 text-end">21%</div>
                                                                 </div>
