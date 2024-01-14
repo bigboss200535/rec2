@@ -706,20 +706,20 @@
 													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/united-states.svg') }}" alt="" /></span></span>
 												</a>
 												<!--begin::Menu sub-->
-												<!-- <div class="menu-sub menu-sub-dropdown w-175px py-4">
+												<div class="menu-sub menu-sub-dropdown w-175px py-4">
 													<div class="menu-item px-3">
-														<a href="account/settings.html" class="menu-link d-flex px-5 active">
+														<a href="{{ route('locale', ['locale' => 'en']) }}" class="menu-link d-flex px-5 active">
 														<span class="symbol symbol-20px me-4">
 															<img class="rounded-1" src="{{ asset('media/flags/united-states.svg') }}" alt="" />
 														</span>English</a>
 													</div>
 													<div class="menu-item px-3">
-														<a href="account/settings.html" class="menu-link d-flex px-5 active">
+														<a href="{{ route('locale', ['locale' => 'fr']) }}" class="menu-link d-flex px-5 active">
 														<span class="symbol symbol-20px me-4">
-															<img class="rounded-1" src="asset('media/flags/france.svg') }}" alt="" />
+															<img class="rounded-1" src="{{ asset('media/flags/france.svg') }}" alt="" />
 														</span>French</a>
 													</div>
-												</div> -->
+												</div>
 												<!--end::Menu sub-->
 											</div>
 											<div class="separator my-2"></div>
