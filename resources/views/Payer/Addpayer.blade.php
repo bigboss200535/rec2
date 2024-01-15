@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.11.7/css/dataTables.bootstrap4.min.css">
 
 <!-- Add these lines before the closing body tag -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script src="https://cdn.datatables.net/1.11.7/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.11.7/js/dataTables.bootstrap4.min.js"></script>
 		
@@ -32,16 +32,16 @@
 						<div class="toolbar" id="kt_toolbar">
 							<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
 								<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-									<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Tax Payer</h1>
+									<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">{{ __('tax_payer') }}</h1>
 									<span class="h-20px border-gray-300 border-start mx-4"></span>
 									<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
 										<li class="breadcrumb-item text-muted">
-											<a href="/home" class="text-muted text-hover-primary">Home</a>
+											<a href="/home" class="text-muted text-hover-primary">{{ __('home') }}</a>
 										</li>
 										<li class="breadcrumb-item">
 											<span class="bullet bg-gray-300 w-5px h-2px"></span>
 										</li>
-										<li class="breadcrumb-item text-dark">Payers</li>
+										<li class="breadcrumb-item text-dark">{{ __('tax_payer') }}</li>
 									</ul>
 								</div>
 								<div class="d-flex align-items-center gap-2 gap-lg-3">
@@ -70,17 +70,17 @@
 												<div class="w-150px me-3">
 													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
 														<option></option>
-														<option value="all">All</option>
-														<option value="active">Active</option>
-														<option value="locked">Inactive</option>
+														<option value="all">{{ __('all') }}</option>
+														<option value="active">{{ __('active') }}</option>
+														<option value="inactive">{{ __('inactive') }}</option>
 													</select>
 												</div>
-												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">Add Payer</button>
+												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">{{ __('add_payer') }}</button>
 											</div>
 											<div class="d-flex justify-content-end align-items-center d-none" data-kt-customer-table-toolbar="selected">
 												<div class="fw-bolder me-5">
-												<span class="me-2" data-kt-customer-table-select="selected_count"></span>Selected</div>
-												<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected" disabled>Delete Selected</button>
+												<span class="me-2" data-kt-customer-table-select="selected_count"></span>{{ __('selected') }}</div>
+												<button type="button" class="btn btn-danger" data-kt-customer-table-select="delete_selected" disabled>{{ __('delete_selected') }}</button>
 											</div>
 										</div>
 									</div>
@@ -111,7 +111,7 @@
 														</div>
 													</td>
 													<td>
-														{{ $payer->Fullname  }}
+														{{ strtoupper($payer->Fullname) }}
 													</td>
 													<td>{{ $payer->GenderName }}</td>
 													<td>
@@ -121,12 +121,18 @@
                 											<div class="badge badge-light-danger">INACTIVE</div>
 														@endif
 													</td>
-													<td>{{ $payer->Telephone1 }}</td>
+													<td>
+														@if ($payer->Telephone1)
+                											{{ $payer->Telephone1 }}
+            											@else
+                											-
+														@endif
+													</td>
 													<td> 
 													@if ($payer->NationalIdNumber)
                 										{{ $payer->NationalIdNumber }}
             										@else
-                										N/A
+                										-
             										@endif
 													</td>
 													<td>{{ \Carbon\Carbon::parse($payer->AddedDate)->format('Y-m-d') }}</td>
@@ -151,190 +157,6 @@
 											@endforeach
 											</tbody>
 										</table>
-									</div>
-								</div>
-					
-								<!--begin::Modal - Customers - Add-->
-								<div class="modal fade" id="kt_modal_add_customer" tabindex="-1" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered mw-650px">
-										<div class="modal-content">
-											<form class="form" action="#" id="kt_modal_add_customer_form" data-kt-redirect="#">
-												<div class="modal-header" id="kt_modal_add_customer_header">
-													<h2 class="fw-bolder">Add a Customer</h2>
-													<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
-														<span class="svg-icon svg-icon-1">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-																<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-															</svg>
-														</span>
-													</div>
-												</div>
-												<div class="modal-body py-10 px-lg-17">
-													<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_customer_header" data-kt-scroll-wrappers="#kt_modal_add_customer_scroll" data-kt-scroll-offset="300px">
-														<div class="fv-row mb-7">
-															<label class="required fs-6 fw-bold mb-2">Name</label>
-															<input type="text" class="form-control form-control-solid" placeholder="" name="name" value="Sean Bean" />
-														</div>
-														<div class="fv-row mb-7">
-															<label class="fs-6 fw-bold mb-2">
-																<span class="required">Email</span>
-																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Email address must be active"></i>
-															</label>
-															<input type="email" class="form-control form-control-solid" placeholder="" name="email" value="sean@dellito.com" />
-														</div>
-														<div class="fv-row mb-15">
-															<label class="fs-6 fw-bold mb-2">Description</label>
-															<input type="text" class="form-control form-control-solid" placeholder="" name="description" />					
-														</div>
-														<div class="fw-bolder fs-3 rotate collapsible mb-7" data-bs-toggle="collapse" href="#kt_modal_add_customer_billing_info" role="button" aria-expanded="false" aria-controls="kt_customer_view_details">Shipping Information
-														<span class="ms-2 rotate-180">
-															
-															<span class="svg-icon svg-icon-3">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-																	<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
-																</svg>
-															</span>
-														</span></div>
-														<div id="kt_modal_add_customer_billing_info" class="collapse show">
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="required fs-6 fw-bold mb-2">Address Line 1</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="address1" value="101, Collins Street" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="fs-6 fw-bold mb-2">Address Line 2</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="address2" value="" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="required fs-6 fw-bold mb-2">Town</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<input class="form-control form-control-solid" placeholder="" name="city" value="Melbourne" />
-																<!--end::Input-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="row g-9 mb-7">
-																<!--begin::Col-->
-																<div class="col-md-6 fv-row">
-																	<!--begin::Label-->
-																	<label class="required fs-6 fw-bold mb-2">State / Province</label>
-																	<!--end::Label-->
-																	<!--begin::Input-->
-																	<input class="form-control form-control-solid" placeholder="" name="state" value="Victoria" />
-																	<!--end::Input-->
-																</div>
-																<!--end::Col-->
-																<!--begin::Col-->
-																<div class="col-md-6 fv-row">
-																	<!--begin::Label-->
-																	<label class="required fs-6 fw-bold mb-2">Post Code</label>
-																	<!--end::Label-->
-																	<!--begin::Input-->
-																	<input class="form-control form-control-solid" placeholder="" name="postcode" value="3000" />
-																	<!--end::Input-->
-																</div>
-																<!--end::Col-->
-															</div>
-															<!--end::Input group-->
-															<!--begin::Input group-->
-															<div class="d-flex flex-column mb-7 fv-row">
-																<!--begin::Label-->
-																<label class="fs-6 fw-bold mb-2">
-																	<span class="required">Country</span>
-																	<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
-																</label>
-																<!--end::Label-->
-																<!--begin::Input-->
-																<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." data-dropdown-parent="#kt_modal_add_customer" class="form-select form-select-solid fw-bolder">
-																	<option value="">Select a Country...</option>
-																	<option value="AF">Afghanistan</option>
-																	<option value="AX">Aland Islands</option> 
-																</select>
-																<!--end::Input-->
-															</div>
-															<div class="fv-row mb-7">
-																<!--begin::Wrapper-->
-																<div class="d-flex flex-stack">
-																	<!--begin::Label-->
-																	<div class="me-5">
-																		<!--begin::Label-->
-																		<label class="fs-6 fw-bold">Use as a billing adderess?</label>
-																		<!--end::Label-->
-																		<!--begin::Input-->
-																		<div class="fs-7 fw-bold text-muted">If you need more info, please check budget planning</div>
-																		<!--end::Input-->
-																	</div>
-																	<!--end::Label-->
-																	<!--begin::Switch-->
-																	<label class="form-check form-switch form-check-custom form-check-solid">
-																		<!--begin::Input-->
-																		<input class="form-check-input" name="billing" type="checkbox" value="1" id="kt_modal_add_customer_billing" checked="checked" />
-																		<!--end::Input-->
-																		<!--begin::Label-->
-																		<span class="form-check-label fw-bold text-muted" for="kt_modal_add_customer_billing">Yes</span>
-																		<!--end::Label-->
-																	</label>
-																	<!--end::Switch-->
-																</div>
-																<!--begin::Wrapper-->
-															</div>
-															<!--end::Input group-->
-														</div>
-														<!--end::Billing form-->
-													</div>
-													<!--end::Scroll-->
-												</div>
-												<!--end::Modal body-->
-												<!--begin::Modal footer-->
-												<div class="modal-footer flex-center">
-													<!--begin::Button-->
-													<button type="reset" id="kt_modal_add_customer_cancel" class="btn btn-light me-3">Discard</button>
-													<!--end::Button-->
-													<!--begin::Button-->
-													<button type="submit" id="kt_modal_add_customer_submit" class="btn btn-primary">
-														<span class="indicator-label">Submit</span>
-														<span class="indicator-progress">Please wait...
-														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-													</button>
-													<!--end::Button-->
-												</div>
-												<!--end::Modal footer-->
-											</form>
-											<!--end::Form-->
-										</div>
-									</div>
-								</div>
-								<!--end::Modal - Customers - Add-->
-								<!--begin::Modal - Adjust Balance-->
-								<div class="modal fade" id="kt_customers_export_modal" tabindex="-1" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered mw-650px">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h2 class="fw-bolder">Export Customers</h2>
-												<div id="kt_customers_export_close" class="btn btn-icon btn-sm btn-active-icon-primary">
-													<span class="svg-icon svg-icon-1">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-															<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-														</svg>
-													</span>
-												</div>
-											</div>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -381,48 +203,80 @@
             $('#kt_customers_table').DataTable();
         });
     </script>
-	<script type="text/javascript">
- 	 $(document).ready(function () {
-    $('[data-kt-customer-table-filter="delete_row"]').on('click', function (e) {
-        e.preventDefault();
 
-        var payerId = $(this).data('payer-id');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all the 'Detail' links
+        var detailLinks = document.querySelectorAll('[data-payer-id]');
 
-        // Add logic to confirm deletion and make an AJAX request to delete the payer
-        // Example: You can use the payerId to make an AJAX request to your delete endpoint
-        // $.ajax({
-        //    method: 'DELETE',
-        //    url: '/delete-payer/' + payerId,
-        //    success: function (response) {
-        //        // Handle success, e.g., remove the row from the table
-        //        $(this).closest('tr').remove();
-        //    },
-        //    error: function (error) {
-        //        // Handle error
-        //        console.error(error);
-        //    }
-        // });
+        // Attach click event to each 'Detail' link
+        detailLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Get the TaxPayerId from the data attribute
+                var payerId = link.getAttribute('data-payer-id');
+
+                // Make an AJAX request to fetch details
+                fetch('/get-taxpayer-details/' + payerId)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Assuming you have a function to display details in a modal
+                        displayDetailsModal(data);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching taxpayer details:', error);
+                    });
+            });
+        });
+
+        // You can define the displayDetailsModal function according to your needs
+        function displayDetailsModal(data) {
+            // Implement the logic to display details in a modal
+            // You can use a library like Bootstrap modal or create your own modal
+            console.log('Taxpayer Details:', data);
+        }
     });
-});
 </script>
+
 	<script type="text/javascript">
+	 	 $(document).ready(function () {
+	    $('[data-kt-customer-table-filter="delete_row"]').on('click', function (e) {
+	        e.preventDefault();
+
+	        var payerId = $(this).data('payer-id');
+
+	        // Add logic to confirm deletion and make an AJAX request to delete the payer
+	        // Example: You can use the payerId to make an AJAX request to your delete endpoint
+	        // $.ajax({
+	        //    method: 'DELETE',
+	        //    url: '/delete-payer/' + payerId,
+	        //    success: function (response) {
+	        //        // Handle success, e.g., remove the row from the table
+	        //        $(this).closest('tr').remove();
+	        //    },
+	        //    error: function (error) {
+	        //        // Handle error
+	        //        console.error(error);
+	        //    }
+	        // });
+	    });
+	});
+</script>
+<!-- <script type="text/javascript">
     "use strict";
 
-    // Assuming you have a form with id 'kt_create_account_form' 
-    // and a submit button with id 'submit_button'
     var form = document.querySelector("#kt_create_account_form");
     var submitButton = document.querySelector("#submit_button");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // You can add form validation logic here using FormValidation library if needed
-
-        // Show a loading indicator
+        
         submitButton.setAttribute("data-kt-indicator", "on");
         submitButton.disabled = true;
 
-        // Extract all form fields
+        
         var formData = {};
         var formElements = form.elements;
         for (var i = 0; i < formElements.length; i++) {
@@ -432,8 +286,8 @@
             }
         }
 
-        // Perform Ajax request using Fetch API
-        fetch('', {
+        
+        fetch("/save-payer", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -442,9 +296,9 @@
         })
         .then(response => response.json())
         .then(response => {
-            // Handle the response from the server
+            
             if (response.status === 'success') {
-                // Show a success message or redirect to another page
+                
                 Swal.fire({
                     text: "Form submitted successfully!",
                     icon: "success",
@@ -455,7 +309,7 @@
                     }
                 });
             } else {
-                // Handle errors or show error messages
+                
                 Swal.fire({
                     text: "Form submission failed. Please try again.",
                     icon: "error",
@@ -467,11 +321,44 @@
                 });
             }
         })
+        .catch(error => {
+            console.error('Error during fetch operation:', error);
+        })
         .finally(() => {
-            // Hide the loading indicator
+            
             submitButton.removeAttribute("data-kt-indicator");
             submitButton.disabled = false;
         });
     });
+</script> -->
+<script>
+    $(document).ready(function () {
+        $('#kt_create_account_form').submit(function (e) {
+            e.preventDefault();
+
+            // Serialize the form data
+            var formData = $(this).serialize();
+
+            // Make an Ajax request to save the payer
+            $.ajax({
+                url: '/save-payer', // Replace with your actual route
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function (data) {
+                    // Handle the success response
+                    console.log(data); // You can customize this part based on your needs
+                    alert('Payer saved successfully');
+                    // You may redirect or perform other actions here
+                },
+                error: function (xhr, status, error) {
+                    // Handle the error response
+                    console.error(xhr.responseText); // You can customize this part based on your needs
+                    alert('Error saving payer');
+                }
+            });
+        });
+    });
 </script>
+
 </html>
