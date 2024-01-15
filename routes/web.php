@@ -20,6 +20,11 @@ Route::get('/', function (){
     return view('Login');
 });
 
+// making fake changes
+// Route::get('/', function (){
+//     return view('Login');
+// });
+
 
 //logof from the system
 Route::get('/Logout', function (){
