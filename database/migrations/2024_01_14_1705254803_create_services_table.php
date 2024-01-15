@@ -4,25 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSystemDataTable extends Migration
+class CreateServicesTable extends Migration
 {
     public function up()
     {
-        Schema::create('system_data', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
 
-		$table->string('SystemId',20);
-		$table->string('SystemName',150);
-		$table->string('Telephone',100);
-		$table->string('Email',50);
-		$table->string('Website',100);
-		;
+		$table->string('ServiceId',20);
+		$table->string('ServiceName',100);
+		$table->string('ServiceDescription',100);
 		$table->string('UserId',20);
-		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
-		$table->string('Slogan',100);
-		$table->string('Version',50);
-		$table->string('Transactions',20);
-		$table->string('DefaultLanguage',20)->default('fr');
+		$table->string('MunicipalId',20);
+		$table->string('IsActive',10)->default('YES');
 		$table->string('AddedId',20);
 		$table->datetime('AddedDate')->default('current_timestamp');
 		$table->datetime('UpdatedDate');
@@ -33,13 +27,13 @@ class CreateSystemDataTable extends Migration
 		$table->string('ArchiveId',10);
 		$table->datetime('ArchiveDate');
 		$table->datetime('ArchiveTime');
-		$table->primary('SystemId');
-		$table->foreign('MunicipalId')->references('MunicipalId')->on('municipal');
+		$table->primary('ServiceId');
+		$table->foreign('UserId')->references('UserId')->on('user_accounts');		$table->foreign('MunicipalId')->references('MunicipalId')->on('municipal');		$table->foreign('ZoneId')->references('ZoneId')->on('zones');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('system_data');
+        Schema::dropIfExists('services');
     }
 }

@@ -4,17 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaritalStatusTable extends Migration
+class CreateTeamMembersTable extends Migration
 {
     public function up()
     {
-        Schema::create('marital_status', function (Blueprint $table) {
+        Schema::create('team_members', function (Blueprint $table) {
 
-		$table->string('StatusId',20);
-		$table->string('MaritalStatus',100);
-		$table->string('MunicipalId',20);
+		$table->string('TeamMembersId',20);
+		$table->text('TeamMembers');
+		$table->string('IsActive',10)->default('YES');
 		$table->string('ZoneId',20);
-		$table->string('UserId',20);
+		$table->string('MunicipalId',20);
 		$table->string('AddedId',20);
 		$table->datetime('AddedDate')->default('current_timestamp');
 		$table->datetime('UpdatedDate');
@@ -25,13 +25,13 @@ class CreateMaritalStatusTable extends Migration
 		$table->string('ArchiveId',10);
 		$table->datetime('ArchiveDate');
 		$table->datetime('ArchiveTime');
-		$table->primary('StatusId');
-
+		$table->primary('TeamMembersId');
+		$table->foreign('MunicipalId')->references('MunicipalId')->on('municipal');		$table->foreign('ZoneId')->references('ZoneId')->on('zones');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('marital_status');
+        Schema::dropIfExists('team_members');
     }
 }
