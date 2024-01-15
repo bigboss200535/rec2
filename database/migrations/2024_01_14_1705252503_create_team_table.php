@@ -16,9 +16,9 @@ class CreateTeamTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
 		$table->string('UserId',20);
-		$table->datetime('DateCreated')->default('current_timestamp');
+		$table->datetime('DateCreated')->useCurrent();
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

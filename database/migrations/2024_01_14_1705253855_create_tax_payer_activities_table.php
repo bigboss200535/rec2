@@ -10,7 +10,7 @@ class CreateTaxPayerActivitiesTable extends Migration
     {
         Schema::create('tax_payer_activities', function (Blueprint $table) {
 
-		$table->increments(TaxPActivityId);
+		$table->string('TaxPActivityId');
 		$table->string('TaxPayerId',20);
 		$table->string('ActivityCategoryId',100);
 		$table->string('ActivityId',100);
@@ -20,7 +20,7 @@ class CreateTaxPayerActivitiesTable extends Migration
 		$table->string('ZoneId',20);
 		$table->string('UserId',20);
 		$table->string('TIN',50);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->string('AddedId',20);
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedBy',60);

@@ -24,7 +24,7 @@ class CreateBillsPaymentTable extends Migration
 		$table->string('RefundedDate',20);
 		$table->text('RefundReason');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

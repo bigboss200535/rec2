@@ -15,7 +15,6 @@ class CreateSystemDataTable extends Migration
 		$table->string('Telephone',100);
 		$table->string('Email',50);
 		$table->string('Website',100);
-		;
 		$table->string('PasswordAttempt',20);
 		$table->string('UserId',20);
 		$table->string('MunicipalId',20);
@@ -25,7 +24,7 @@ class CreateSystemDataTable extends Migration
 		$table->string('Transactions',20);
 		$table->string('DefaultLanguage',20)->default('fr');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

@@ -20,7 +20,7 @@ class CreatePricingTypeTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('IsActive',10)->default('YES');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

@@ -17,7 +17,7 @@ class CreateCollectorTable extends Migration
 		$table->string('TeamId',20);
 		$table->string('MunicipalId',20);
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

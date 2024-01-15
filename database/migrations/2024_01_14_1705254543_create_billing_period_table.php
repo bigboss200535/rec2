@@ -17,7 +17,7 @@ class CreateBillingPeriodTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('AddedId',20);
 		$table->string('BillValue',10);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->text('Comment');
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
