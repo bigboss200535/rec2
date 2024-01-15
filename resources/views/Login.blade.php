@@ -1,8 +1,3 @@
-<?php 
-    session_start();
-    // include '../includes/css_js_files.php';
-    // require '../config/language/en.php';
-?>
 <!DOCTYPE html>
 <html lang="en" translate="no">
     <head>
@@ -23,8 +18,7 @@
                                 <img alt="Logo" src="{{ asset('media/logo.png') }}" class="h-100px"/>
                             </a>
                             <h1 class="fw-bolder fs-2qx" style="color: #ffffff;"><?php echo 'Sig-Recettes';?> </h1>
-                            <!-- <span class="text-gray-400"><i style=""><?php //echo $lang['slogan'];?></i></span> -->
-                            <span class="text-gray-400"><i style=""><?php echo 'Anywhere, Anytime';?></i></span>
+                            <span class="text-gray-400"><i style="">{{ __('slogan') }}</i></span>
                               <img alt="Logo" src="{{ asset('media/icons/login.svg') }}" style="padding-bottom:20px; padding-left: 10px;" align="center" height="300px"/>
                         </div>
                         <div class="">
@@ -38,23 +32,23 @@
                             <form class="form w-100" novalidate="novalidate" id="form_submit" action="#" method="POST">
                                 <div class="text-center mb-10">
                                     <!-- <h1 class="text-successs mb-3"><?php //echo $lang['sign_in'];?></h1> -->
-                                     <h1 class="text-successs mb-3">Sign In</h1>
+                                     <h1 class="text-successs mb-3"> {{ __('signin') }}</h1>
                                 </div>
                                 <div class="fv-row mb-10">
-                                    <label class="form-label fs-6 fw-bolder text-dark"><?php echo 'Username'?></label>
-                                    <input maxlength="30" class="form-control form-control-lg form-control-solid" type="text" name="username" value="admin" autocomplete="off" placeholder="<?php echo 'Usernane'?>" />
+                                    <label class="form-label fs-6 fw-bolder text-dark">{{ __('username') }}</label>
+                                    <input maxlength="30" class="form-control form-control-lg form-control-solid" type="text" name="username" value="admin" autocomplete="off" placeholder="{{ __('username') }}" />
                                 </div>
                                 <div class="fv-row mb-10">
                                     <div class="d-flex flex-stack mb-2">
-                                        <label class="form-label fw-bolder text-dark fs-6 mb-0"><?php echo 'Password';?></label>
-                                        <a href="<?php //echo $routes->get('forget_pass')->getPath() ?>" class="link-success fs-6 fw-bolder"><?php echo 'Forget Password';?>?</a>
+                                        <label class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('password') }}</label>
+                                        <a href="<?php //echo $routes->get('forget_pass')->getPath() ?>" class="link-success fs-6 fw-bolder">{{ __('forgetpass') }}?</a>
                                     </div>
-                                    <input maxlength="30" class="form-control form-control-lg form-control-solid" type="password" name="password" value="admin" autocomplete="off" placeholder="<?php //echo $lang['placeholder_pass'];?>"/>
+                                    <input maxlength="30" class="form-control form-control-lg form-control-solid" type="password" name="password" value="admin" autocomplete="off" placeholder="{{ __('password') }}"/>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" id="login_submit" class="btn btn-lg btn-success w-100 mb-5">
-                                        <span class="indicator-label"><?php echo 'Submit';?></span>
-                                        <span class="indicator-progress"><?php echo 'Please Wait';?>
+                                        <span class="indicator-label">{{ __('submit') }}</span>
+                                        <span class="indicator-progress">{{ __('wait') }}
                                         <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                     </button>
                                 </div>

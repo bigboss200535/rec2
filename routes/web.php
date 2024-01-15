@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PayerController;
+use Illuminate\Support\Facades\Session;
 // use App\Http\Controller\CustomerController;
 
 /*
@@ -18,6 +19,11 @@ use App\Http\Controllers\PayerController;
 Route::get('/', function (){
     return view('Login');
 });
+
+// making fake changes
+// Route::get('/', function (){
+//     return view('Login');
+// });
 
 
 //logof from the system
@@ -122,5 +128,11 @@ Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');
 // Route::get('bill', [AuthController::class, 'logout'])->name('logout');
 // Route::get('AddPayer','PayerController@home');
 
-
 Route::get('/AddPayer', [PayerController::class, 'getAllPayers']);
+
+Route::get('/locale/{locale}', function (Request $request, $locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+})->name('locale');
+
+Route::post('/SavePayer', [PayerController::class, 'savePayer']);
