@@ -19,7 +19,7 @@ class CreateComplainsTable extends Migration
 		$table->string('UserId',20);
 		$table->string('ZoneId',20);
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');
@@ -29,7 +29,8 @@ class CreateComplainsTable extends Migration
 		$table->datetime('ArchiveDate');
 		$table->datetime('ArchiveTime');
 		$table->primary('ComplainId');
-		$table->foreign('MunicipalId')->references('MunicipalId')->on('municipal');		$table->foreign('UserId')->references('UserId')->on('user_accounts');		$table->foreign('ZoneId')->references('ZoneId')->on('zones');
+		$table->foreign('MunicipalId')->references('MunicipalId')->on('municipal');		
+		$table->foreign('UserId')->references('UserId')->on('user_accounts');		$table->foreign('ZoneId')->references('ZoneId')->on('zones');
         });
     }
 

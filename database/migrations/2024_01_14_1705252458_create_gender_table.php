@@ -15,7 +15,7 @@ class CreateGenderTable extends Migration
 		$table->string('IsActive',10)->default('YES');
 		$table->string('Differential',10)->default('0');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

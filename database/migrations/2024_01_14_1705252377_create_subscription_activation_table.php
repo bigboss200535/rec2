@@ -10,7 +10,7 @@ class CreateSubscriptionActivationTable extends Migration
     {
         Schema::create('subscription_activation', function (Blueprint $table) {
 
-		$table->increments(SubId);
+		$table->string('SubId');
 		$table->string('Subscription',100);
 		$table->string('SubscriptionKey',100);
 		$table->date('SubscriptionStart');
@@ -21,7 +21,7 @@ class CreateSubscriptionActivationTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

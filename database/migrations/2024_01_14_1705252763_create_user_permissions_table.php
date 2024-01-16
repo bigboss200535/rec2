@@ -20,7 +20,7 @@ class CreateUserPermissionsTable extends Migration
 		$table->string('IsZoneManager',20)->default('NO');
 		$table->string('IsAdmin',20)->default('NO');
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

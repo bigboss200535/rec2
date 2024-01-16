@@ -10,7 +10,7 @@ class CreateTpAdvertisingTable extends Migration
     {
         Schema::create('tp_advertising', function (Blueprint $table) {
 
-		$table->increments(PayerAdsId);
+		$table->string('PayerAdsId');
 		$table->string('TaxPayerId',20);
 		$table->string('TaxableId',20);
 		$table->string('Length',20);
@@ -23,7 +23,7 @@ class CreateTpAdvertisingTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
 		$table->string('UserId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->string('AddedId',20);
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedBy',60);

@@ -36,7 +36,7 @@ class CreateInvoiceTable extends Migration
 		$table->string('TaxManagerId',20);
 		$table->string('TaxCollectorApproval',20)->default('0');
 		$table->string('TaxCollectorId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

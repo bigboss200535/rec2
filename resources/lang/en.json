@@ -9,12 +9,10 @@
     "submit" : "Submit",
     "wait" : "Please Wait!",
     "total_month" : "Total Payments this Month",
-    "hello" : "Hello",
     "make_payment" : "Make Payment",
     "quick_guide" : "Quick Guide",
     "payment_month" : "Total Payments this Month",
     "expected_revenue" : "Expected Revenue This Month",
     "car_tickets" : "Car Tickets",
-    "general_tax" : "General Tax",
-    "total_shipments" : "Total Shipments"
+    "general_tax" : "General Tax"
 }

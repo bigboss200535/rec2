@@ -10,7 +10,7 @@ class CreateTpTaxableTable extends Migration
     {
         Schema::create('tp_taxable', function (Blueprint $table) {
 
-		$table->increments(TPTaxableId);
+		$table->string('TPTaxableId');
 		$table->string('TaxPayerId',20);
 		$table->string('TaxableId',20);
 		$table->string('Length',20);
@@ -23,7 +23,7 @@ class CreateTpTaxableTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
 		$table->string('UserId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->string('AddedId',20);
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedBy',60);

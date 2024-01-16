@@ -14,13 +14,13 @@ class CreateUserLogsTable extends Migration
 		$table->string('MunicipalId',20);
 		$table->string('ZoneId',20);
 		$table->string('LogName',100);
-		$table->datetime('LogDate')->default('current_timestamp');
-		$table->datetime('LogTime')->default('current_timestamp');
+		$table->datetime('LogDate')->useCurrent();
+		$table->datetime('LogTime')->useCurrent();
 		$table->string('LogIp',20);
 		$table->string('SystemPC',20);
 		$table->string('Transactions',20);
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');

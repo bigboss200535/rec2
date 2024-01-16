@@ -20,7 +20,7 @@ class CreateUserLevelTable extends Migration
 		$table->string('CanPrint',10);
 		$table->string('CanView',10);
 		$table->string('AddedId',20);
-		$table->datetime('AddedDate')->default('current_timestamp');
+		$table->datetime('AddedDate')->useCurrent();
 		$table->datetime('UpdatedDate');
 		$table->string('UpdatedId',60);
 		$table->text('UpdatedNotes');
