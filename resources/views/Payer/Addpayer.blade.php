@@ -93,13 +93,13 @@
 															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" disabled/>
 														</div>
 													</th>
-													<th class="min-w-125px">Name</th>
-													<th class="min-w-125px">Gender</th>
-													<th class="min-w-125px">Status</th>
-													<th class="min-w-125px">Telephone</th>
-													<th class="min-w-125px">National ID</th>
-													<th class="min-w-125px">Created Date</th>
-													<th class="text-end min-w-70px">Actions</th>
+													<th class="min-w-125px">{{ __('name') }}</th>
+													<th class="min-w-125px">{{ __('gender') }}</th>
+													<th class="min-w-125px">{{ __('status') }}</th>
+													<th class="min-w-125px">{{ __('telephone') }}</th>
+													<th class="min-w-125px">{{ __('national_id') }}</th>
+													<th class="min-w-125px">{{ __('created_date') }}</th>
+													<th class="text-end min-w-70px">{{ __('action') }}</th>
 												</tr>
 											</thead>
 											<tbody class="fw-bold text-gray-600">
