@@ -1,4 +1,4 @@
-<div class="modal fade" id="kt_modal_create_account" tabindex="-1" aria-hidden="true">
+		<div class="modal fade" id="kt_modal_create_account" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog mw-1000px">
 				<div class="modal-content">
 					<div class="modal-header">

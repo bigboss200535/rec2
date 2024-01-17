@@ -72,7 +72,7 @@
 														<option></option>
 														<!-- <option value="{{ __('all') }}">{{ __('all') }}</option> -->
 														<option value="{{ __('active') }}">{{ __('active') }}</option>
-														<option value="{{ __('inactive') }}">{{ __('inactive') }}</option>
+														<option value="{{ __('inactive') }}">{{ __('Désactivé') }}</option>
 													</select>
 												</div>
 												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">{{ __('add_payer') }}</button>

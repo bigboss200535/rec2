@@ -19,7 +19,7 @@
     "home":"Maison",
     "all":"Toute",
     "active":"Active",
-    "inactive": "Inactive",
+    "inactive": "Désactivé",
     "add_payer" :"Ajouter un payeur",
     "delete_selected": "Supprimer sélectionnée",
     "selected" : "Choisie",
