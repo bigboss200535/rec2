@@ -187,8 +187,8 @@
 		<script src="{{ asset('js/custom/utilities/modals/upgrade-plan.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
-		<!-- <script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script> -->
-		<script src="{{ asset('js/custom/utilities/modals/tax_register.js') }}"></script>
+		<script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script>
+		<!-- <script src="{{ asset('js/custom/utilities/modals/tax_register.js') }}"></script> -->
 
 	</body>
 	 <script>

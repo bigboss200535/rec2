@@ -33,8 +33,8 @@
     "created_date" : "Date de Création",
     "telephone" : "Téléphone",
     "national_id" :"Carte D'identité",
-    "add_tax_payer":"Add Payer Account",
-    "bio_info" : "Bio Info",
+    "add_tax_payer":"Ajouter Un Contribuable",
+    "bio_info" : "Informations sur le payeur",
     "dashboard" : "Tableau de bord",
     "list" : "Liste",
     "invoice" : "Facture",
@@ -42,7 +42,16 @@
     "revenue" : "Revenu",
     "report" : "Rapport",
     "location": "Emplacement",
-    "system_setup" : "Installation du système"
+    "system_setup" : "Installation du système",
+    "geographic_location" : "Géographiques",
+    "complete" : "Complète",
+    "information" : "Information",
+    "by_submitting_creation" : "En soumettant ce formulaire, vous créez un contribuable,",
+    "this_undone" : "Ça ne peut pas être annulé",
+    "continue" : "Continuer",
+    "back" : "Dos",
+    "all_fields_marked" : "Tous les champs marqués",
+    "is_mandatory" : "est Obligatoire."
 
 
 

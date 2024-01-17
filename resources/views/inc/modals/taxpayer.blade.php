@@ -2,7 +2,7 @@
 			<div class="modal-dialog mw-1000px">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h2>Add Payer Account</h2>
+						<h2>{{ __('add_tax_payer') }}</h2>
 						<div class="btn btn-sm btn-icon btn-active-color-success" data-bs-dismiss="modal">
 							<span class="svg-icon svg-icon-1">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -19,21 +19,22 @@
 									<h3 class="stepper-title">New Account</h3>
 								</div> -->
 								<div class="stepper-item current" data-kt-stepper-element="nav">
-									<h3 class="stepper-title">Bio Info</h3>
+									<h3 class="stepper-title">{{ __('bio_info') }}</h3>
 								</div>
 								<div class="stepper-item" data-kt-stepper-element="nav">
-									<h3 class="stepper-title">Geographical Location</h3>
+									<h3 class="stepper-title">{{ __('geographic_location') }}</h3>
 								</div>
 								<div class="stepper-item" data-kt-stepper-element="nav">
-									<h3 class="stepper-title">Completed</h3>
+									<h3 class="stepper-title">{{ __('complete') }}</h3>
 								</div>
 							</div>
 							<form class="mx-auto mw-600px w-100 py-10" novalidate="novalidate" id="kt_create_account_form">
+								<!-- @csrf -->
 								<div class="current" data-kt-stepper-element="content" >
 									<div class="w-100">
 										<div class="pb">
 											<!-- <h2 class="fw-bolder text-dark">Bio Info</h2> -->
-											<div class="text-muted fw-bold fs-12">All field marked (<a href="#" style="color:red">*</a>) is mandatory.
+											<div class="text-muted fw-bold fs-12">{{ __('all_fields_marked') }} (<a href="#" style="color:red">*</a>) {{ __('is_mandatory') }}
 											</div> 
 										</div>
 										<br>
@@ -133,9 +134,9 @@
 									<div class="w-100">
 										<div class="pb-10 pb-lg-12">
 											<!--begin::Title-->
-											<!-- <h2 class="fw-bolder text-dark">Geographical Location</h2> -->
-											<div class="text-muted fw-bold fs-6">Add geographical information of Tax payer
-											</div>
+											<!-- <h2 class="fw-bolder text-dark">Geographical Location</h2>  -->
+											<!--  <div class="text-muted fw-bold fs-6">Add geographical information of Tax payer 
+											</div> -->
 										</div>
 										<div class="d-flex flex-column mb-7 fv-row">
 											<label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
@@ -254,9 +255,9 @@
 												</span>
 												<div class="d-flex flex-stack flex-grow-1">
 													<div class="fw-bold">
-														<h4 class="text-gray-900 fw-bolder">102515415511</h4>
-														<div class="fs-6 text-gray-700">By Submitting this form, you are creating a Tax Payer, 
-														<a href="#" class="fw-bolder" style="color: green">this can not be undone</a></div>
+														<h4 class="text-gray-900 fw-bolder">{{ __('information') }}</h4>
+														<div class="fs-6 text-gray-700">{{ __('by_submitting_creation') }}
+														<a href="#" class="fw-bolder" style="color: green">{{ __('this_undone') }}</a></div>
 													</div>
 												</div>
 											</div>
@@ -272,11 +273,11 @@
 												<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="black" />
 											</svg>
 										</span>
-										Back</button>
+										{{ __('submit') }}</button>
 									</div>
 									<div>
 										<button type="button" class="btn btn-lg btn-success me-3" data-kt-stepper-action="submit">
-											<span class="indicator-label">Submit
+											<span class="indicator-label">{{ __('submit') }}
 											<span class="svg-icon svg-icon-3 ms-2 me-0">
 												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 													<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
@@ -284,10 +285,10 @@
 												</svg>
 											</span>
 											</span>
-											<span class="indicator-progress">Please wait...
+											<span class="indicator-progress">{{ __('wait') }}
 											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 										</button>
-										<button type="button" class="btn btn-lg btn-success" data-kt-stepper-action="next">Continue
+										<button type="button" class="btn btn-lg btn-success" data-kt-stepper-action="next">{{ __('continue') }}
 										<span class="svg-icon svg-icon-4 ms-1 me-0">
 											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 												<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
