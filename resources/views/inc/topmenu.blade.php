@@ -702,10 +702,19 @@
 											<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
 												<a href="#" class="menu-link px-5">
 													<span class="menu-title position-relative">Language
-													<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/united-states.svg') }}" alt="" /></span></span>
+													
+													<!-- <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
+													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/united-states.svg') }}" alt="" /></span> -->
+													@if(Session::get('locale') == 'en')
+    													<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
+    													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/united-states.svg') }}" alt=""/></span>
+													@elseif(Session::get('locale') == 'fr')
+    													<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">French
+    													<img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('media/flags/france.svg') }}" alt="" /></span>
+													@endif
+												</span>
 												</a>
-												<!--begin::Menu sub-->
+												
 												<div class="menu-sub menu-sub-dropdown w-175px py-4">
 													<div class="menu-item px-3">
 														<a href="{{ route('locale', ['locale' => 'en']) }}" class="menu-link d-flex px-5 active">

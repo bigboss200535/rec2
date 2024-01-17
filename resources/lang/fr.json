@@ -1,7 +1,7 @@
 {
     "hello" : "Bonjour",
     "welcome" : "Bienvenue",
-    "signin": "Sign In",
+    "signin": "Se Connecter",
     "slogan": "N'importe où, n'importe quand",
     "username": "Nom d'utilisateur",
     "password": "Mot de passe",
@@ -24,7 +24,27 @@
     "delete_selected": "Supprimer sélectionnée",
     "selected" : "Choisie",
     "name" : "Nom",
-    "gender" : "Genre"
+    "gender" : "Genre",
+    "search_payer" : "Rechercher un payeur",
+    "view" : "Voir",
+    "delete" : "Supprimer",
+    "action" : "Action",
+    "status" : "Statut",
+    "created_date" : "Date de Création",
+    "telephone" : "Téléphone",
+    "national_id" :"Carte D'identité",
+    "add_tax_payer":"Add Payer Account",
+    "bio_info" : "Bio Info",
+    "dashboard" : "Tableau de bord",
+    "list" : "Liste",
+    "invoice" : "Facture",
+    "prepare" : "Préparer",
+    "revenue" : "Revenu",
+    "report" : "Rapport",
+    "location": "Emplacement",
+    "system_setup" : "Installation du système"
+
+
 
 
 }

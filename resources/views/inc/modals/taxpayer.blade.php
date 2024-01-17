@@ -25,13 +25,14 @@
 									<h3 class="stepper-title">Geographical Location</h3>
 								</div>
 								<div class="stepper-item" data-kt-stepper-element="nav">
-									<h3 class="stepper-title">Final</h3>
+									<h3 class="stepper-title">Completed</h3>
 								</div>
 							</div>
 							<form class="mx-auto mw-600px w-100 py-10" novalidate="novalidate" id="kt_create_account_form">
 								<div class="current" data-kt-stepper-element="content" >
 									<div class="w-100">
 										<div class="pb">
+											<!-- <h2 class="fw-bolder text-dark">Bio Info</h2> -->
 											<div class="text-muted fw-bold fs-12">All field marked (<a href="#" style="color:red">*</a>) is mandatory.
 											</div> 
 										</div>
@@ -55,6 +56,7 @@
 										</div>
 										<div class="row mb-12">
 											<div class="col-md-6 fv-row">
+												<!--begin::Label-->
 												<label class="required fs-6 fw-bold form-label mb-2">Gender </label>
 												<div class="row fv-row">
 													<div class="position-relative">
@@ -125,6 +127,8 @@
 										</div>
 									</div>
 								</div>
+								<!--end::Step 2-->
+								<!--begin::Step 3-->
 								<div data-kt-stepper-element="content">
 									<div class="w-100">
 										<div class="pb-10 pb-lg-12">
@@ -152,7 +156,7 @@
 											<div class="col-md-6 fv-row">
 												<label class="fs-6 fw-bold form-label mb-2">Longitude</label>
 												<div class="position-relative">
-													<input type="text" class="form-control form-control-solid" minlength="3" maxlength="50" placeholder="" name="longitude" id="longitute" />
+													<input type="text" class="form-control form-control-solid" minlength="3" maxlength="50" placeholder="" name="longitude" id="longitude" />
 												</div>
 											</div>
 										</div>
@@ -235,7 +239,9 @@
 								<div data-kt-stepper-element="content">
 									<div class="w-100">
 										<div class="pb-8 pb-lg-10">
-											
+											<!-- <h2 class="fw-bolder text-dark" align="center">Sucess!</h2> -->
+											<!-- <div class="text-muted fw-bold fs-6" align="center">If you need more info, please
+											</div> -->
 										</div>
 										<div class="mb-0">
 											<div class="notice d-flex bg-light-success rounded border-success border border-dashed p-6">
@@ -248,7 +254,7 @@
 												</span>
 												<div class="d-flex flex-stack flex-grow-1">
 													<div class="fw-bold">
-														<h4 class="text-gray-900 fw-bolder">Information!</h4>
+														<h4 class="text-gray-900 fw-bolder">102515415511</h4>
 														<div class="fs-6 text-gray-700">By Submitting this form, you are creating a Tax Payer, 
 														<a href="#" class="fw-bolder" style="color: green">this can not be undone</a></div>
 													</div>

@@ -62,17 +62,17 @@
 														<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black" />
 													</svg>
 												</span>
-												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Payer"/>
+												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="{{ __('search_payer') }}"/>
 											</div>
 										</div>
 										<div class="card-toolbar">
 											<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
 												<div class="w-150px me-3">
-													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
+													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="{{ __('all') }}" data-kt-ecommerce-order-filter="status">
 														<option></option>
-														<option value="all">{{ __('all') }}</option>
-														<option value="active">{{ __('active') }}</option>
-														<option value="inactive">{{ __('inactive') }}</option>
+														<!-- <option value="{{ __('all') }}">{{ __('all') }}</option> -->
+														<option value="{{ __('active') }}">{{ __('active') }}</option>
+														<option value="{{ __('inactive') }}">{{ __('inactive') }}</option>
 													</select>
 												</div>
 												<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#kt_modal_create_account">{{ __('add_payer') }}</button>
@@ -137,7 +137,7 @@
 													</td>
 													<td>{{ \Carbon\Carbon::parse($payer->AddedDate)->format('Y-m-d') }}</td>
 													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">{{ __('action') }}
 														<span class="svg-icon svg-icon-5 m-0">
 															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
@@ -146,10 +146,10 @@
 														</a>
 														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
 															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-payer-id="{{ $payer->TaxPayerId }}">View</a>
+																<a href="#" class="menu-link px-3" data-payer-id="{{ $payer->TaxPayerId }}">{{ __('view') }}</a>
 															</div>
 															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row" data-payer-id="{{ $payer->TaxPayerId }}">Delete</a>
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row" data-payer-id="{{ $payer->TaxPayerId }}">{{ __('delete') }}</a>
 															</div>
 														</div>
 													</td>
@@ -160,29 +160,21 @@
 									</div>
 								</div>
 							</div>
-							<!--end::Container-->
 						</div>
-						<!--end::Post-->
 					</div>
-					<!--end::Content-->
 					@include('inc.footercontent')
-					<!--end::Footer-->
 				</div>
-				<!--end::Wrapper-->
 			</div>
-			<!--end::Page-->
 		</div>
 		<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
 			<span class="svg-icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="black" />
-					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="black" />
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="black"/>
 				</svg>
 			</span>
 		</div>
-		
 			@include('inc.modals.taxpayer')
-
 		<script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
 		<script src="{{ asset('js/scripts.bundle.js') }}"></script>
 		<script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
@@ -195,7 +187,9 @@
 		<script src="{{ asset('js/custom/utilities/modals/upgrade-plan.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
-		<script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script>
+		<!-- <script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script> -->
+		<script src="{{ asset('js/custom/utilities/modals/tax_register.js') }}"></script>
+
 	</body>
 	 <script>
         $(document).ready(function() {

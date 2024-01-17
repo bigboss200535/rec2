@@ -17,12 +17,12 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Dashboard</span>
+										<span class="menu-title">{{ __('dashboard') }}</span>
 									</span>
 								</div>
 								<div class="menu-item">
 									<div class="menu-content pt-8 pb-2">
-										<span class="menu-section text-muted text-uppercase fs-8 ls-1">HOME</span>
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">{{ __('home') }}</span>
 									</div>
 								</div>
 								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
@@ -35,7 +35,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Tax Payer</span>
+										<span class="menu-title">{{ __('tax_payer') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -44,7 +44,7 @@
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">List</span>
+												<span class="menu-title">{{ __('list') }}</span>
 											</a>
 										</div>
 										<!-- <div class="menu-item">
@@ -67,7 +67,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Invoice</span>
+										<span class="menu-title">{{ __('invoice') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -76,7 +76,7 @@
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Prepare</span>
+												<span class="menu-title">{{ __('prepare') }}</span>
 											</a>
 										</div>
 										<div class="menu-item">
@@ -108,7 +108,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Revenue</span>
+										<span class="menu-title">{{ __('revenue') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -117,7 +117,7 @@
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Make Payments</span>
+												<span class="menu-title">{{ __('make_payment') }}</span>
 											</a>
 										</div>
 										<!-- <div class="menu-item">
@@ -149,7 +149,7 @@
 												</svg>
 											</span>
 										</span>
-										<span class="menu-title">Reports</span>
+										<span class="menu-title">{{ __('report') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -194,7 +194,7 @@
 											</span>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-title">Geo Locations</span>
+										<span class="menu-title">{{ __('location') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -244,7 +244,7 @@
 											</span>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="menu-title">System Setup</span>
+										<span class="menu-title">{{ __('system_setup') }}</span>
 										<span class="menu-arrow"></span>
 									</span>
 									<div class="menu-sub menu-sub-accordion menu-active-bg">
