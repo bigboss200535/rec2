@@ -196,6 +196,11 @@
 		<script src="{{ asset('js/custom/utilities/modals/create-app.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
 		<script src="{{ asset('js/custom/utilities/modals/create-account.js') }}"></script>
+<<<<<<< Updated upstream
+=======
+		<!-- <script src="{{ asset('js/custom/utilities/modals/tax_register.js') }}"></script> -->
+
+>>>>>>> Stashed changes
 	</body>
 	 <script>
         $(document).ready(function() {

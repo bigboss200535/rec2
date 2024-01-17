@@ -95,12 +95,8 @@
 																	<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bolder">Project Alice</a>
 																	<div class="text-gray-400 fs-7">Phase 1 development</div>
 																</div>
-																<!--end::Title-->
 															</div>
-															<!--end::Section-->
-															<!--begin::Label-->
 															<span class="badge badge-light fs-8">1 hr</span>
-															<!--end::Label-->
 														</div>
 														<!--end::Item-->
 														<!--begin::Item-->

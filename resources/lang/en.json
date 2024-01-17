@@ -14,5 +14,22 @@
     "payment_month" : "Total Payments this Month",
     "expected_revenue" : "Expected Revenue This Month",
     "car_tickets" : "Car Tickets",
+<<<<<<< Updated upstream
     "general_tax" : "General Tax"
+=======
+    "general_tax" : "General Tax",
+    "tax_payer" : "Tax Payer",
+    "home":"Home",
+    "home":"Home",
+    "all":"All",
+    "active":"Active",
+    "inactive": "Inactive",
+    "add_payer" :"Add Payer",
+    "delete_selected": "Delete Selected",
+    "selected" : "Selected",
+    "name" : "Name",
+    "gender" : "Gender",
+    "search_payer" : "Search Payer" 
+
+>>>>>>> Stashed changes
 }

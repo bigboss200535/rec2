@@ -14,5 +14,48 @@
     "payment_month" : "Total des paiements ce mois-ci",
     "expected_revenue" : "Revenus attendus ce mois-ci",
     "car_tickets" : "Billets de voiture",
+<<<<<<< Updated upstream
     "general_tax" : "Taxe générale"
+=======
+    "general_tax" : "Taxe générale",
+    "tax_payer" : "Contribuable",
+    "home":"Maison",
+    "all":"Toute",
+    "active":"Active",
+    "inactive": "Inactive",
+    "add_payer" :"Ajouter un payeur",
+    "delete_selected": "Supprimer sélectionnée",
+    "selected" : "Choisie",
+    "name" : "Nom",
+    "gender" : "Genre",
+    "search_payer" : "Rechercher un payeur",
+    "view" : "Voir",
+    "delete" : "Supprimer",
+    "action" : "Action",
+    "status" : "Statut",
+    "created_date" : "Date de Création",
+    "telephone" : "Téléphone",
+    "national_id" :"Carte D'identité",
+    "add_tax_payer":"Ajouter Un Contribuable",
+    "bio_info" : "Informations sur le payeur",
+    "dashboard" : "Tableau de bord",
+    "list" : "Liste",
+    "invoice" : "Facture",
+    "prepare" : "Préparer",
+    "revenue" : "Revenu",
+    "report" : "Rapport",
+    "location": "Emplacement",
+    "system_setup" : "Installation du système",
+    "geographic_location" : "Géographiques",
+    "complete" : "Complète",
+    "information" : "Information",
+    "by_submitting_creation" : "En soumettant ce formulaire, vous créez un contribuable,",
+    "this_undone" : "Ça ne peut pas être annulé",
+    "continue" : "Continuer",
+    "back" : "Dos"
+
+
+
+
+>>>>>>> Stashed changes
 }
