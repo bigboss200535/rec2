@@ -1,4 +1,4 @@
-		<div class="modal fade" id="kt_modal_create_account" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="kt_modal_create_account" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog mw-1000px">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -133,9 +133,8 @@
 								<div data-kt-stepper-element="content">
 									<div class="w-100">
 										<div class="pb-10 pb-lg-12">
-											<!--begin::Title-->
 											<!-- <h2 class="fw-bolder text-dark">Geographical Location</h2>  -->
-											<!--  <div class="text-muted fw-bold fs-6">Add geographical information of Tax payer 
+											 <!-- <div class="text-muted fw-bold fs-6">Add geographical information of Tax payer 
 											</div> -->
 										</div>
 										<div class="d-flex flex-column mb-7 fv-row">
@@ -257,7 +256,7 @@
 													<div class="fw-bold">
 														<h4 class="text-gray-900 fw-bolder">{{ __('information') }}</h4>
 														<div class="fs-6 text-gray-700">{{ __('by_submitting_creation') }}
-														<a href="#" class="fw-bolder" style="color: green">{{ __('this_undone') }}</a></div>
+														<a href="#" class="fw-bolder" style="color: green">!</a></div>
 													</div>
 												</div>
 											</div>
@@ -273,7 +272,7 @@
 												<path d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z" fill="black" />
 											</svg>
 										</span>
-										{{ __('submit') }}</button>
+										{{ __('back') }}</button>
 									</div>
 									<div>
 										<button type="button" class="btn btn-lg btn-success me-3" data-kt-stepper-action="submit">

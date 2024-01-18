@@ -20,12 +20,6 @@ Route::get('/', function (){
     return view('Login');
 });
 
-// making fake changes
-// Route::get('/', function (){
-//     return view('Login');
-// });
-
-
 //logof from the system
 Route::get('/Logout', function (){
     return view('/');
@@ -33,7 +27,7 @@ Route::get('/Logout', function (){
 
 
 // dashboard after login
-Route::get('/home', function (){
+Route::get('/Home', function (){
     return view('Home/Dashboard');
 });
 
@@ -112,6 +106,10 @@ Route::get('/UserRole', function (){
 
 Route::get('/Payments', function (){
     return view('Monetise/Payments');
+});
+
+Route::get('/PayerDetails', function (){
+    return view('Payer/PayerDetails');
 });
 
 Route::get('/Logout', [UsersAuthController::class, 'Logout'])->name('Logout');

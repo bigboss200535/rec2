@@ -63,7 +63,7 @@
                     </div>
                     <div class="d-flex flex-center flex-wrap fs-6 p-5 pb-0">
                         <div class="d-flex flex-center fw-bold fs-6">
-                            <a class="text-muted text-hover-success px-2">&copy;<?php echo '2023';?></span> <?php echo 'Sig-Recettes'?>.  Go to Dashboard <a href="/home">Here</a></a>
+                            <a class="text-muted text-hover-success px-2">&copy;<?php echo '2023';?></span> <?php echo 'Sig-Recettes'?>.  Go to Dashboard <a href="/Home">Here</a></a>
                             <a href="#" class="text-muted text-hover-success px-2" data-bs-toggle="modal" data-bs-target="#kt_modal_help"></a>
                         </div>
                     </div>

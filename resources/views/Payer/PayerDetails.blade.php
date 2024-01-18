@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title> {{ config('app.name') }} | Tax Payer</title>
+		<title> {{ config('app.name') }} | Payer Details</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
 		<link href="{{ asset('plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
 		<link rel="../shortcut icon" href="{{ asset('media/logo.png') }}"/>
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.11.7/css/dataTables.bootstrap4.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 <!-- Add these lines before the closing body tag -->
 	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 	<script src="https://cdn.datatables.net/1.11.7/js/jquery.dataTables.min.js"></script>
@@ -146,7 +146,7 @@
 														</a>
 														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
 															<div class="menu-item px-3">
-																<a href="/PayerDetails" class="menu-link px-3" data-payer-id="{{ $payer->TaxPayerId }}">{{ __('view') }}</a>
+																<a href="#" class="menu-link px-3" data-payer-id="{{ $payer->TaxPayerId }}">{{ __('view') }}</a>
 															</div>
 															<div class="menu-item px-3">
 																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row" data-payer-id="{{ $payer->TaxPayerId }}">{{ __('delete') }}</a>
@@ -240,91 +240,11 @@
 
 	        var payerId = $(this).data('payer-id');
 
-	        // Add logic to confirm deletion and make an AJAX request to delete the payer
-	        // Example: You can use the payerId to make an AJAX request to your delete endpoint
-	        // $.ajax({
-	        //    method: 'DELETE',
-	        //    url: '/delete-payer/' + payerId,
-	        //    success: function (response) {
-	        //        // Handle success, e.g., remove the row from the table
-	        //        $(this).closest('tr').remove();
-	        //    },
-	        //    error: function (error) {
-	        //        // Handle error
-	        //        console.error(error);
-	        //    }
-	        // });
+	       
 	    });
 	});
 </script>
-<!-- <script type="text/javascript">
-    "use strict";
 
-    var form = document.querySelector("#kt_create_account_form");
-    var submitButton = document.querySelector("#submit_button");
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        
-        submitButton.setAttribute("data-kt-indicator", "on");
-        submitButton.disabled = true;
-
-        
-        var formData = {};
-        var formElements = form.elements;
-        for (var i = 0; i < formElements.length; i++) {
-            var element = formElements[i];
-            if (element.name) {
-                formData[element.name] = element.value;
-            }
-        }
-
-        
-        fetch("/save-payer", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(response => {
-            
-            if (response.status === 'success') {
-                
-                Swal.fire({
-                    text: "Form submitted successfully!",
-                    icon: "success",
-                    buttonsStyling: false,
-                    confirmButtonText: "Ok, got it!",
-                    customClass: {
-                        confirmButton: "btn btn-primary"
-                    }
-                });
-            } else {
-                
-                Swal.fire({
-                    text: "Form submission failed. Please try again.",
-                    icon: "error",
-                    buttonsStyling: false,
-                    confirmButtonText: "Ok, got it!",
-                    customClass: {
-                        confirmButton: "btn btn-primary"
-                    }
-                });
-            }
-        })
-        .catch(error => {
-            console.error('Error during fetch operation:', error);
-        })
-        .finally(() => {
-            
-            submitButton.removeAttribute("data-kt-indicator");
-            submitButton.disabled = false;
-        });
-    });
-</script> -->
 <script>
     $(document).ready(function () {
         $('#kt_create_account_form').submit(function (e) {

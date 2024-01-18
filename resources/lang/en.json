@@ -17,7 +17,6 @@
     "general_tax" : "General Tax",
     "tax_payer" : "Tax Payer",
     "home":"Home",
-    "home":"Home",
     "all":"All",
     "active":"Active",
     "inactive": "Inactive",
@@ -26,6 +25,34 @@
     "selected" : "Selected",
     "name" : "Name",
     "gender" : "Gender",
-    "search_payer" : "Search Payer"
+    "search_payer" : "Search Payer",
+    "view" : "View",
+    "delete" : "Delete",
+    "action" : "Action",
+    "status" : "Status",
+    "created_date" : "Date Created",
+    "telephone" : "Telephone",
+    "national_id" :"National Id",
+    "add_tax_payer":"Add Tax Payer",
+    "bio_info" : "Bio Information",
+    "dashboard" : "Dashboard",
+    "list" : "List",
+    "invoice" : "Invoice",
+    "prepare" : "Prepare",
+    "revenue" : "Revenue",
+    "report" : "Report",
+    "location": "Location",
+    "system_setup" : "System Setup",
+    "geographic_location" : "Geographic Location",
+    "complete" : "Complete",
+    "information" : "Information",
+    "by_submitting_creation" : "By submitting this form, you are creating a taxpayer",
+    "this_undone" : "It can't be undone",
+    "continue" : "Continue",
+    "back" : "Back",
+    "all_fields_marked" : "All fields Marked",
+    "is_mandatory" : "is Madatory."
+
+
 
 }
